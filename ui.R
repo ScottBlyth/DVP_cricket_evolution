@@ -12,17 +12,18 @@ shinyUI(fluidPage(
   ),
   headerPanel(h1("Evolution: How has Cricket Changed?", class="title", align="center")),
 
-  sidebarLayout( 
-    sidebarPanel(
-      sliderInput("year", "Year", as.Date("2003", "%Y"),as.Date("2023", "%Y"), as.Date("1", "%Y"), 
-                  round=TRUE, timeFormat="%Y"),
-      width=2), 
+  
+  sidebarLayout(sidebarPanel(
+    sliderInput("year", "Year", as.Date("2003", "%Y"),as.Date("2023", "%Y"), as.Date("1", "%Y"), round=TRUE, timeFormat="%Y"),
+    checkboxInput("T20", "T20"),
+    checkboxInput("ODI", "ODI"),
+    checkboxInput("Test", "Test")
+    
+    ,width=2),
     mainPanel(
       leafletOutput("gamesMap",width = "50%", height = 400), align="center")
-    ), 
-    position ="right"
-    )
+      ), position="right")
   
   
-  )
+)
 
