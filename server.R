@@ -50,18 +50,33 @@ cpal = colorNumeric("RdBu",data_counts$n, reverse=TRUE)
 game_types = c("T20", "ODI", "Test")
 
 create_games_played_graph = function(team) {
-  data_counts_team <- data_counts %>% filter(team_1==team)
-  p <- ggplot(data_counts_team, aes(x=as.numeric(year.x),y=n,colour=match_type.x))+geom_point()
+  if(team != "World") {
+    data_counts_team <- data_counts %>% filter(team_1==team)
+    p <- ggplot(data_counts_team, aes(x=as.numeric(year.x),y=n,colour=match_type.x))+geom_point()+
+      labs(title=team, x="Year",  y="Matches Played")+expand_limits(y=0)
+    return(p)
+  }
+  p <- ggplot(data_counts,  aes(x=as.numeric(year.x),y=n,colour=match_type.x))+geom_smooth()+
+    labs(title=team, x="Year",  y="Matches Played")+expand_limits(y=0)
   return(p)
 }
-counts_smaller <- data_counts %>% filter(team_1=="Australia") %>% group_by(team_1) %>% reframe()
+
+
+
+counts_smaller <- data_counts %>%
+                  group_by(team_1, lat,long) %>% reframe()
 counts_smaller$graphs <- lapply(counts_smaller$team_1, create_games_played_graph)
 
-team_names <- counts_smaller$team_1[match(firstPartNames, counts_smaller$team_1)]
-game_graphs = counts_smaller$graphs[match(firstPartNames, counts_smaller$team_1)]
+team_names <- counts_smaller$team_1
+game_graphs = counts_smaller$graphs
+team_long = counts_smaller$lat
+team_lat = counts_smaller$long
 
 
 shinyServer(function(input, output) {
+  
+  p <- reactive(create_games_played_graph(input$country))
+  output$country_plot <- renderPlot(p())
   
   form_bools = reactive(c(input$T20, input$ODI, input$Test))
   game_forms = reactive(to_vec(for(i in 1:3) if(form_bools()[i]) game_types[i]))
@@ -74,16 +89,17 @@ shinyServer(function(input, output) {
   
   output$gamesMap <- renderLeaflet(leaflet(worldMap) %>% 
                                      setView(lng = 0, lat = 0, zoom = 1.25) %>%
-                                     addTiles() %>%  addProviderTiles("Esri.WorldGrayCanvas") %>%
+                                     addTiles() %>% addProviderTiles("Esri.WorldGrayCanvas") %>%
                                      addPolygons(
                                        stroke = FALSE, 
                                        smoothFactor = 0.2, 
                                        fillOpacity = 1,
                                        color = cpal(games_played()),
-                                       popup="hi"
-                                     ) %>%
-                                     addLegend(pal=cpal, values=data_counts$n))
+                                       popup = paste("Country", test()$team_1[match(firstPartNames, test()$team_1)], 
+                                          "\nn: ", test()$n[match(firstPartNames, test()$team_1)])
+                                     ) %>% addLegend(pal=cpal, values=data_counts$n))
+
   
-#popup = paste("Country", test()$team_1[match(firstPartNames, test()$team_1)], "n: ",
-#  test()$n[match(firstPartNames, test()$team_1)])
 })
+
+

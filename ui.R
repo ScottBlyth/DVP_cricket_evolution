@@ -17,12 +17,14 @@ shinyUI(fluidPage(
     sliderInput("year", "Year", as.Date("2003", "%Y"),as.Date("2023", "%Y"), as.Date("1", "%Y"), round=TRUE, timeFormat="%Y"),
     checkboxInput("T20", "T20", value=TRUE),
     checkboxInput("ODI", "ODI", value=TRUE),
-    checkboxInput("Test", "Test", value=TRUE)
+    checkboxInput("Test", "Test", value=TRUE),
+    textInput("country", "Country", value="World")
     ,width=2),
     mainPanel(
-      leafletOutput("gamesMap",width = "50%", height = 400), align="center")
-      ), position="right")
-  
+      splitLayout(leafletOutput("gamesMap",width = "100%", height = 400),
+                  plotOutput("country_plot", height="200px", width="100%")) 
+        )
+      ))
   
 )
 
