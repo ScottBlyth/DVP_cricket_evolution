@@ -11,29 +11,29 @@ library(leafpop)
 library(ggplot2)
 data <- read.csv("cricsheet_data.csv")
 
-data_counts <- read.csv("games_played.csv")
+data_counts <- read.csv("games_played2.csv")
 
 data_runs <- data %>% 
-  reframe(batting=team.batting,runs=runs, match_type=match_type,year=format(as.Date(start.date, "%Y-%m-%d"), "%Y")) %>% 
+  reframe(gender=gender, batting=team.batting,runs=runs, match_type=match_type,year=format(as.Date(start.date, "%Y-%m-%d"), "%Y")) %>% 
   group_by(batting, year,match_type) %>% summarise(runsAvg=mean(runs))
 
 
 get_location <- memoise(geocode_OSM)
-
-# data_games = data %>% 
-#           reframe(id=match.id, team_1=team_1, team_2=team_2, match_type=match_type,year=format(as.Date(start.date, "%Y-%m-%d"), "%Y")) %>% 
-#           group_by(id, team_1, team_2,match_type, year) %>% tally()
-# 
-# 
-# data_count <- data_games %>% group_by(team_1, year, match_type) %>% tally() %>% reframe(n=n)
-# data_count2 <- data_games %>% group_by(team_2, year, match_type) %>% tally() %>%
-#           reframe(team_1=team_2, year=year,match_type=match_type, n=n)
-# data_count3 <- merge(x=data_count, y=data_count2, by.x="team_1", by.y="team_1", all = TRUE) %>% 
-#   filter(year.x==year.y,match_type.x==match_type.y, team_1!="ICC World XI") %>% group_by(team_1, year.x, match_type) %>% 
-#   reframe(n=n.x+n.y, lat=get_location(team_1)$coords[1], long=get_location(team_1)$coords[2])
-# 
-# data_count3$lat = apply(data_count3$team_1, function(x) {return(get_location(x)$coords[[1]][1])})
-# data_count3$long = apply(data_count3$team_1, function(x) {return(get_location(x)$coords[[2]])})
+ 
+  # data_games = data %>% 
+  #           reframe(gender=gender, id=match.id, team_1=team_1, team_2=team_2, match_type=match_type,year=format(as.Date(start.date, "%Y-%m-%d"), "%Y")) %>% 
+  #           group_by(id, team_1, team_2,match_type, year, gender) 
+  
+#  
+#  data_count <- data_games %>% group_by(team_1, year, match_type, gender) %>% tally() %>% reframe(n=n)
+#  data_count2 <- data_games %>% group_by(team_2, year, match_type, gender) %>% tally() %>%
+#            reframe(team_1=team_2,gender=gender, year=year,match_type=match_type, n=n)
+#  data_count3 <- merge(x=data_count, y=data_count2, by.x="team_1", by.y="team_1", all = TRUE) %>% 
+#    filter(year.x==year.y,match_type.x==match_type.y, team_1!="ICC World XI") %>% group_by(team_1, year.x, match_type.x, gender) %>% 
+#    reframe(n=n.x+n.y, lat=get_location(team_1)$coords[1], long=get_location(team_1)$coords[2])
+#  
+#  data_count3$lat = apply(data_count3$team_1, function(x) {return(get_location(x)$coords[[1]][1])})
+#  data_count3$long = apply(data_count3$team_1, function(x) {return(get_location(x)$coords[[2]])})
 
 #data_counts <- data_counts %>% group_by(team_1, year.x) %>% reframe(n=sum(n))
 func <- function(x) {
@@ -54,11 +54,13 @@ firstPartNames <- lapply(splitNames, function(x) x[1])
 
 game_types = c("T20", "ODI", "Test")
 
+genderColour <- colorFactor(palette = c( "steelblue1", "maroon1"), domain=c("male", "female"))
 create_games_played_graph = function(team) {
   if(team != "World") {
     data_counts_team <- data_counts %>% filter(team_1==team)
-    p <- ggplot(data_counts_team, aes(x=as.numeric(year.x),y=n,colour=match_type.x))+geom_point()+
-      labs(title=team, x="Year",  y="Matches Played",colour="Match Type")+expand_limits(y=0)
+    p <- ggplot(data_counts_team, aes(x=as.numeric(year.x),y=n,fill=genderColour(gender)))+geom_col()+
+      labs(title=team, x="Year",  y="Matches Played",colour="Match Type", fill="Gender")+expand_limits(y=0)+
+      scale_color_manual(values=c("male", "female"))
     return(p)
   }
   p <- ggplot(data_counts,  aes(x=as.numeric(year.x),y=n,colour=match_type.x))+geom_smooth()+
@@ -73,14 +75,7 @@ create_avg_runs_graph = function(team) {
   return(p)
 }
 
-counts_smaller <- data_counts %>%
-                  group_by(team_1, lat,long) %>% reframe()
-counts_smaller$graphs <- lapply(counts_smaller$team_1, create_games_played_graph)
 
-team_names <- counts_smaller$team_1
-game_graphs = counts_smaller$graphs
-team_long = counts_smaller$lat
-team_lat = counts_smaller$long
 
 d <- data_counts %>% group_by(team_1, year.x) %>% summarise(n=sum(n))
 cpal = colorNumeric("RdBu",d$n, reverse=TRUE)

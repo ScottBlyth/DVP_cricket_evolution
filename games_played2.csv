@@ -1,0 +1,1721 @@
+"","team_1","year.x","match_type.x","gender","n"
+"1","Afghanistan","2014","ODI","male",10
+"2","Afghanistan","2014","T20","male",3
+"3","Afghanistan","2015","ODI","male",10
+"4","Afghanistan","2015","T20","male",9
+"5","Afghanistan","2016","T20","male",12
+"6","Afghanistan","2017","ODI","male",7
+"7","Afghanistan","2017","T20","male",8
+"8","Afghanistan","2018","ODI","male",9
+"9","Afghanistan","2018","T20","male",5
+"10","Afghanistan","2019","ODI","male",20
+"11","Afghanistan","2019","T20","male",10
+"12","Afghanistan","2019","Test","male",3
+"13","Afghanistan","2021","ODI","male",3
+"14","Afghanistan","2021","T20","male",8
+"15","Afghanistan","2022","ODI","male",12
+"16","Afghanistan","2022","T20","male",18
+"17","Afghanistan","2023","ODI","male",20
+"18","Afghanistan","2023","T20","male",13
+"19","Argentina","2021","T20","male",2
+"20","Argentina","2021","T20","male",4
+"21","Argentina","2023","T20","female",8
+"22","Argentina","2023","T20","female",6
+"23","Argentina","2023","T20","male",6
+"24","Argentina","2023","T20","male",4
+"25","Australia","2003","ODI","male",27
+"26","Australia","2003","Test","male",4
+"27","Australia","2003","Test","male",6
+"28","Australia","2004","ODI","male",22
+"29","Australia","2004","Test","male",7
+"30","Australia","2005","ODI","male",15
+"31","Australia","2005","Test","male",3
+"32","Australia","2005","Test","male",4
+"33","Australia","2006","ODI","male",21
+"34","Australia","2006","T20","male",2
+"35","Australia","2006","Test","male",6
+"36","Australia","2007","ODI","female",15
+"37","Australia","2007","ODI","male",25
+"38","Australia","2007","T20","male",8
+"39","Australia","2008","ODI","male",11
+"40","Australia","2008","Test","male",8
+"41","Australia","2008","Test","male",10
+"42","Australia","2009","ODI","female",13
+"43","Australia","2009","ODI","male",30
+"44","Australia","2009","T20","female",5
+"45","Australia","2009","T20","male",6
+"46","Australia","2009","Test","male",9
+"47","Australia","2009","Test","male",10
+"48","Australia","2010","ODI","male",17
+"49","Australia","2010","T20","female",3
+"50","Australia","2010","T20","female",11
+"51","Australia","2010","T20","male",5
+"52","Australia","2010","T20","male",13
+"53","Australia","2010","Test","male",9
+"54","Australia","2011","ODI","male",20
+"55","Australia","2011","Test","female",3
+"56","Australia","2011","Test","male",5
+"57","Australia","2012","ODI","male",12
+"58","Australia","2012","ODI","male",15
+"59","Australia","2012","T20","male",4
+"60","Australia","2012","T20","male",9
+"61","Australia","2012","Test","male",7
+"62","Australia","2013","ODI","female",6
+"63","Australia","2013","ODI","female",10
+"64","Australia","2013","ODI","male",14
+"65","Australia","2013","ODI","male",18
+"66","Australia","2013","T20","female",5
+"67","Australia","2013","T20","male",5
+"68","Australia","2013","Test","female",3
+"69","Australia","2013","Test","male",11
+"70","Australia","2014","T20","male",11
+"71","Australia","2014","T20","male",9
+"72","Australia","2014","Test","male",5
+"73","Australia","2015","ODI","female",7
+"74","Australia","2015","ODI","male",11
+"75","Australia","2015","Test","female",4
+"76","Australia","2015","Test","male",10
+"77","Australia","2016","ODI","female",7
+"78","Australia","2016","ODI","female",11
+"79","Australia","2016","ODI","male",18
+"80","Australia","2016","ODI","male",22
+"81","Australia","2016","T20","female",7
+"82","Australia","2016","T20","female",4
+"83","Australia","2016","T20","male",11
+"84","Australia","2016","T20","male",8
+"85","Australia","2016","Test","male",6
+"86","Australia","2017","ODI","female",13
+"87","Australia","2017","ODI","female",13
+"88","Australia","2017","ODI","male",12
+"89","Australia","2017","ODI","male",12
+"90","Australia","2017","T20","female",4
+"91","Australia","2017","T20","female",4
+"92","Australia","2017","T20","male",3
+"93","Australia","2017","T20","male",3
+"94","Australia","2018","ODI","female",5
+"95","Australia","2018","ODI","female",6
+"96","Australia","2018","ODI","male",6
+"97","Australia","2018","ODI","male",7
+"98","Australia","2018","T20","female",17
+"99","Australia","2018","T20","female",11
+"100","Australia","2018","T20","male",13
+"101","Australia","2018","T20","male",7
+"102","Australia","2018","Test","male",6
+"103","Australia","2019","ODI","female",11
+"104","Australia","2019","ODI","female",20
+"105","Australia","2019","ODI","male",14
+"106","Australia","2019","ODI","male",23
+"107","Australia","2019","T20","female",9
+"108","Australia","2019","T20","female",12
+"109","Australia","2019","T20","male",5
+"110","Australia","2019","T20","male",8
+"111","Australia","2019","Test","female",8
+"112","Australia","2019","Test","male",12
+"113","Australia","2020","ODI","female",3
+"114","Australia","2020","ODI","female",4
+"115","Australia","2020","ODI","male",10
+"116","Australia","2020","ODI","male",11
+"117","Australia","2020","T20","female",4
+"118","Australia","2020","T20","female",14
+"119","Australia","2020","T20","male",9
+"120","Australia","2020","T20","male",19
+"121","Australia","2020","Test","male",3
+"122","Australia","2021","ODI","female",6
+"123","Australia","2021","ODI","female",5
+"124","Australia","2021","ODI","male",4
+"125","Australia","2021","ODI","male",3
+"126","Australia","2021","T20","female",6
+"127","Australia","2021","T20","female",10
+"128","Australia","2021","T20","male",18
+"129","Australia","2021","T20","male",22
+"130","Australia","2021","Test","female",4
+"131","Australia","2021","Test","male",5
+"132","Australia","2022","ODI","female",12
+"133","Australia","2022","ODI","female",16
+"134","Australia","2022","ODI","male",13
+"135","Australia","2022","ODI","male",17
+"136","Australia","2022","T20","female",16
+"137","Australia","2022","T20","female",18
+"138","Australia","2022","T20","male",19
+"139","Australia","2022","T20","male",21
+"140","Australia","2022","Test","male",5
+"141","Australia","2022","Test","male",11
+"142","Australia","2023","ODI","female",13
+"143","Australia","2023","ODI","female",18
+"144","Australia","2023","ODI","male",17
+"145","Australia","2023","ODI","male",22
+"146","Australia","2023","T20","female",14
+"147","Australia","2023","T20","female",10
+"148","Australia","2023","T20","male",12
+"149","Australia","2023","T20","male",8
+"150","Australia","2023","Test","male",5
+"151","Australia","2023","Test","male",13
+"152","Austria","2020","T20","female",5
+"153","Austria","2021","T20","male",3
+"154","Austria","2022","T20","male",12
+"155","Austria","2023","T20","male",7
+"156","Bahamas","2021","T20","male",4
+"157","Bahamas","2023","T20","male",4
+"158","Bahrain","2020","T20","male",2
+"159","Bahrain","2021","T20","male",3
+"160","Bahrain","2022","T20","female",8
+"161","Bahrain","2022","T20","female",14
+"162","Bahrain","2022","T20","male",14
+"163","Bahrain","2022","T20","male",20
+"164","Bahrain","2023","T20","female",4
+"165","Bahrain","2023","T20","female",11
+"166","Bahrain","2023","T20","male",6
+"167","Bahrain","2023","T20","male",13
+"168","Bangladesh","2003","ODI","male",14
+"169","Bangladesh","2003","Test","male",4
+"170","Bangladesh","2004","ODI","male",10
+"171","Bangladesh","2004","Test","male",2
+"172","Bangladesh","2005","ODI","male",8
+"173","Bangladesh","2005","Test","male",3
+"174","Bangladesh","2006","ODI","male",14
+"175","Bangladesh","2007","ODI","male",16
+"176","Bangladesh","2007","T20","male",7
+"177","Bangladesh","2007","Test","male",5
+"178","Bangladesh","2008","ODI","male",17
+"179","Bangladesh","2008","Test","male",6
+"180","Bangladesh","2009","ODI","male",16
+"181","Bangladesh","2009","T20","male",3
+"182","Bangladesh","2010","ODI","male",22
+"183","Bangladesh","2010","T20","male",3
+"184","Bangladesh","2010","Test","male",7
+"185","Bangladesh","2011","ODI","male",17
+"186","Bangladesh","2012","T20","male",4
+"187","Bangladesh","2013","ODI","female",5
+"188","Bangladesh","2013","ODI","male",8
+"189","Bangladesh","2013","T20","female",3
+"190","Bangladesh","2013","T20","male",3
+"191","Bangladesh","2013","Test","male",3
+"192","Bangladesh","2014","ODI","male",18
+"193","Bangladesh","2014","T20","male",10
+"194","Bangladesh","2014","Test","male",7
+"195","Bangladesh","2015","ODI","female",14
+"196","Bangladesh","2015","ODI","male",15
+"197","Bangladesh","2015","T20","female",3
+"198","Bangladesh","2015","T20","female",7
+"199","Bangladesh","2016","ODI","male",9
+"200","Bangladesh","2016","T20","female",5
+"201","Bangladesh","2016","T20","female",15
+"202","Bangladesh","2016","T20","male",6
+"203","Bangladesh","2016","T20","male",16
+"204","Bangladesh","2017","ODI","female",6
+"205","Bangladesh","2017","ODI","female",6
+"206","Bangladesh","2017","ODI","male",12
+"207","Bangladesh","2017","ODI","male",12
+"208","Bangladesh","2017","Test","male",8
+"209","Bangladesh","2018","ODI","female",5
+"210","Bangladesh","2018","ODI","female",13
+"211","Bangladesh","2018","ODI","male",9
+"212","Bangladesh","2018","ODI","male",17
+"213","Bangladesh","2018","T20","female",19
+"214","Bangladesh","2018","T20","female",24
+"215","Bangladesh","2018","T20","male",10
+"216","Bangladesh","2018","T20","male",15
+"217","Bangladesh","2018","Test","male",7
+"218","Bangladesh","2019","ODI","male",18
+"219","Bangladesh","2019","T20","female",8
+"220","Bangladesh","2019","T20","female",7
+"221","Bangladesh","2019","T20","male",8
+"222","Bangladesh","2019","T20","male",7
+"223","Bangladesh","2019","Test","male",5
+"224","Bangladesh","2020","T20","female",4
+"225","Bangladesh","2020","T20","female",3
+"226","Bangladesh","2020","T20","male",5
+"227","Bangladesh","2020","T20","male",4
+"228","Bangladesh","2020","Test","male",2
+"229","Bangladesh","2021","ODI","female",8
+"230","Bangladesh","2021","ODI","male",12
+"231","Bangladesh","2021","T20","male",27
+"232","Bangladesh","2021","Test","male",7
+"233","Bangladesh","2022","ODI","female",10
+"234","Bangladesh","2022","ODI","female",13
+"235","Bangladesh","2022","ODI","male",12
+"236","Bangladesh","2022","ODI","male",15
+"237","Bangladesh","2022","T20","female",17
+"238","Bangladesh","2022","T20","female",23
+"239","Bangladesh","2022","T20","male",15
+"240","Bangladesh","2022","T20","male",21
+"241","Bangladesh","2022","Test","male",10
+"242","Bangladesh","2023","ODI","female",11
+"243","Bangladesh","2023","ODI","female",22
+"244","Bangladesh","2023","ODI","male",21
+"245","Bangladesh","2023","ODI","male",32
+"246","Bangladesh","2023","T20","female",18
+"247","Bangladesh","2023","T20","female",15
+"248","Bangladesh","2023","T20","male",17
+"249","Bangladesh","2023","T20","male",14
+"250","Bangladesh","2023","Test","male",4
+"251","Barbados","2022","T20","female",3
+"252","Belgium","2021","T20","male",5
+"253","Belgium","2022","T20","male",5
+"254","Belize","2021","T20","male",5
+"255","Bermuda","2007","ODI","male",8
+"256","Bermuda","2019","T20","male",11
+"257","Bermuda","2021","T20","male",3
+"258","Bermuda","2023","T20","male",11
+"259","Bhutan","2019","T20","male",2
+"260","Bhutan","2021","T20","female",5
+"261","Bhutan","2022","T20","female",4
+"262","Bhutan","2022","T20","female",6
+"263","Bhutan","2022","T20","male",4
+"264","Bhutan","2022","T20","male",6
+"265","Bhutan","2023","T20","female",4
+"266","Bhutan","2023","T20","female",4
+"267","Bhutan","2023","T20","male",4
+"268","Bhutan","2023","T20","male",4
+"269","Botswana","2018","T20","female",4
+"270","Botswana","2019","T20","female",7
+"271","Botswana","2019","T20","male",7
+"272","Botswana","2021","T20","female",6
+"273","Botswana","2021","T20","female",3
+"274","Botswana","2021","T20","male",7
+"275","Botswana","2021","T20","male",4
+"276","Botswana","2022","T20","female",3
+"277","Botswana","2022","T20","female",8
+"278","Botswana","2022","T20","male",4
+"279","Botswana","2022","T20","male",9
+"280","Botswana","2023","T20","female",8
+"281","Botswana","2023","T20","female",7
+"282","Botswana","2023","T20","male",8
+"283","Botswana","2023","T20","male",7
+"284","Brazil","2022","T20","female",4
+"285","Brazil","2023","T20","female",6
+"286","Bulgaria","2021","T20","male",6
+"287","Bulgaria","2022","T20","male",17
+"288","Bulgaria","2023","T20","male",3
+"289","Cambodia","2023","T20","female",4
+"290","Cambodia","2023","T20","female",4
+"291","Cambodia","2023","T20","male",6
+"292","Cambodia","2023","T20","male",6
+"293","Cameroon","2021","T20","male",4
+"294","Cameroon","2021","T20","male",3
+"295","Cameroon","2022","T20","male",6
+"296","Cameroon","2023","T20","female",5
+"297","Canada","2003","ODI","male",6
+"298","Canada","2006","ODI","male",3
+"299","Canada","2007","ODI","male",6
+"300","Canada","2011","ODI","male",8
+"301","Canada","2014","ODI","male",2
+"302","Canada","2019","T20","female",11
+"303","Canada","2019","T20","male",11
+"304","Canada","2021","T20","male",3
+"305","Canada","2021","T20","male",4
+"306","Canada","2022","T20","male",12
+"307","Canada","2023","ODI","male",4
+"308","Canada","2023","T20","female",6
+"309","Canada","2023","T20","female",6
+"310","Canada","2023","T20","male",5
+"311","Canada","2023","T20","male",5
+"312","Cayman Islands","2019","T20","male",6
+"313","Cayman Islands","2023","T20","male",8
+"314","China","2019","T20","female",9
+"315","China","2023","T20","female",4
+"316","China","2023","T20","female",4
+"317","China","2023","T20","male",4
+"318","China","2023","T20","male",4
+"319","Cook Islands","2022","T20","male",5
+"320","Cook Islands","2023","T20","female",5
+"321","Croatia","2022","T20","male",5
+"322","Croatia","2023","T20","male",5
+"323","Cyprus","2021","T20","male",5
+"324","Cyprus","2022","T20","male",5
+"325","Czech Republic","2021","T20","male",6
+"326","Czech Republic","2022","T20","male",14
+"327","Czech Republic","2023","T20","male",2
+"328","Denmark","2019","T20","male",6
+"329","Denmark","2021","T20","male",8
+"330","Denmark","2022","T20","male",7
+"331","Denmark","2023","T20","male",8
+"332","Denmark","2023","T20","male",10
+"333","England","2003","ODI","male",24
+"334","England","2003","Test","female",5
+"335","England","2003","Test","male",8
+"336","England","2004","ODI","male",16
+"337","England","2004","Test","male",3
+"338","England","2005","ODI","male",15
+"339","England","2006","ODI","male",19
+"340","England","2006","Test","male",6
+"341","England","2006","Test","male",11
+"342","England","2007","ODI","male",25
+"343","England","2007","T20","male",7
+"344","England","2007","Test","male",9
+"345","England","2008","ODI","male",20
+"346","England","2008","T20","male",3
+"347","England","2008","Test","female",8
+"348","England","2008","Test","male",12
+"349","England","2009","ODI","male",13
+"350","England","2009","ODI","male",22
+"351","England","2009","T20","male",9
+"352","England","2009","T20","male",5
+"353","England","2009","Test","female",8
+"354","England","2009","Test","male",14
+"355","England","2010","ODI","male",16
+"356","England","2010","T20","male",9
+"357","England","2010","Test","male",12
+"358","England","2011","ODI","female",17
+"359","England","2011","ODI","male",26
+"360","England","2011","T20","female",2
+"361","England","2011","T20","female",5
+"362","England","2011","T20","male",2
+"363","England","2011","T20","male",5
+"364","England","2012","T20","female",10
+"365","England","2012","T20","female",13
+"366","England","2012","T20","male",9
+"367","England","2012","T20","male",12
+"368","England","2012","Test","male",12
+"369","England","2013","ODI","female",9
+"370","England","2013","ODI","female",14
+"371","England","2013","ODI","male",16
+"372","England","2013","ODI","male",21
+"373","England","2013","T20","male",8
+"374","England","2013","T20","male",7
+"375","England","2013","Test","male",6
+"376","England","2013","Test","male",12
+"377","England","2014","ODI","female",3
+"378","England","2014","ODI","female",10
+"379","England","2014","ODI","male",13
+"380","England","2014","ODI","male",20
+"381","England","2014","T20","female",6
+"382","England","2014","T20","female",8
+"383","England","2014","T20","male",9
+"384","England","2014","T20","male",11
+"385","England","2015","ODI","male",7
+"386","England","2015","ODI","male",20
+"387","England","2015","Test","male",5
+"388","England","2015","Test","male",12
+"389","England","2016","ODI","female",7
+"390","England","2016","ODI","female",14
+"391","England","2016","ODI","male",11
+"392","England","2016","ODI","male",18
+"393","England","2016","T20","female",10
+"394","England","2016","T20","female",12
+"395","England","2016","T20","male",8
+"396","England","2016","T20","male",10
+"397","England","2016","Test","male",17
+"398","England","2017","ODI","female",11
+"399","England","2017","ODI","female",13
+"400","England","2017","ODI","male",18
+"401","England","2017","ODI","male",20
+"402","England","2017","T20","female",3
+"403","England","2017","T20","female",4
+"404","England","2017","T20","male",6
+"405","England","2017","T20","male",7
+"406","England","2017","Test","male",3
+"407","England","2017","Test","male",9
+"408","England","2018","ODI","female",8
+"409","England","2018","ODI","female",9
+"410","England","2018","ODI","male",14
+"411","England","2018","ODI","male",15
+"412","England","2018","T20","female",15
+"413","England","2018","T20","female",14
+"414","England","2018","T20","male",9
+"415","England","2018","T20","male",8
+"416","England","2018","Test","male",10
+"417","England","2019","ODI","female",15
+"418","England","2019","ODI","female",21
+"419","England","2019","ODI","male",15
+"420","England","2019","ODI","male",21
+"421","England","2019","T20","female",7
+"422","England","2019","T20","female",13
+"423","England","2019","T20","male",9
+"424","England","2019","T20","male",15
+"425","England","2019","Test","male",7
+"426","England","2019","Test","male",12
+"427","England","2020","ODI","male",9
+"428","England","2020","T20","female",13
+"429","England","2020","T20","female",6
+"430","England","2020","T20","male",19
+"431","England","2020","T20","male",12
+"432","England","2020","Test","male",9
+"433","England","2021","ODI","female",11
+"434","England","2021","ODI","female",6
+"435","England","2021","ODI","male",14
+"436","England","2021","ODI","male",9
+"437","England","2021","T20","female",9
+"438","England","2021","T20","female",10
+"439","England","2021","T20","male",16
+"440","England","2021","T20","male",17
+"441","England","2021","Test","male",9
+"442","England","2021","Test","male",15
+"443","England","2022","ODI","female",21
+"444","England","2022","ODI","female",16
+"445","England","2022","ODI","male",17
+"446","England","2022","ODI","male",12
+"447","England","2022","T20","female",18
+"448","England","2022","T20","female",21
+"449","England","2022","T20","male",24
+"450","England","2022","T20","male",27
+"451","England","2022","Test","female",8
+"452","England","2022","Test","male",15
+"453","England","2023","ODI","female",6
+"454","England","2023","ODI","female",20
+"455","England","2023","ODI","male",10
+"456","England","2023","ODI","male",24
+"457","England","2023","T20","female",14
+"458","England","2023","T20","female",12
+"459","England","2023","T20","male",14
+"460","England","2023","T20","male",12
+"461","England","2023","Test","female",6
+"462","England","2023","Test","male",8
+"463","Estonia","2021","T20","male",5
+"464","Estonia","2022","T20","male",3
+"465","Estonia","2023","T20","male",2
+"466","Eswatini","2021","T20","female",5
+"467","Eswatini","2022","T20","male",5
+"468","Fiji","2022","T20","male",5
+"469","Finland","2021","T20","male",4
+"470","Finland","2022","T20","male",8
+"471","Finland","2023","T20","male",4
+"472","France","2021","T20","female",7
+"473","France","2021","T20","female",2
+"474","France","2021","T20","male",9
+"475","France","2021","T20","male",4
+"476","France","2022","T20","male",4
+"477","France","2023","T20","female",10
+"478","France","2023","T20","female",9
+"479","France","2023","T20","male",10
+"480","France","2023","T20","male",9
+"481","Gambia","2022","T20","male",6
+"482","Germany","2019","T20","male",5
+"483","Germany","2019","T20","male",4
+"484","Germany","2020","T20","female",9
+"485","Germany","2020","T20","male",6
+"486","Germany","2021","T20","female",7
+"487","Germany","2021","T20","female",9
+"488","Germany","2021","T20","male",12
+"489","Germany","2021","T20","male",14
+"490","Germany","2022","T20","female",3
+"491","Germany","2022","T20","female",8
+"492","Germany","2022","T20","male",8
+"493","Germany","2022","T20","male",13
+"494","Germany","2023","T20","female",4
+"495","Germany","2023","T20","female",5
+"496","Germany","2023","T20","male",11
+"497","Germany","2023","T20","male",12
+"498","Ghana","2019","T20","male",4
+"499","Ghana","2021","T20","male",9
+"500","Ghana","2022","T20","male",8
+"501","Ghana","2023","T20","male",9
+"502","Gibraltar","2019","T20","male",3
+"503","Gibraltar","2021","T20","male",6
+"504","Gibraltar","2022","T20","male",10
+"505","Gibraltar","2023","T20","male",15
+"506","Greece","2021","T20","male",3
+"507","Greece","2023","T20","female",4
+"508","Guernsey","2022","T20","female",6
+"509","Guernsey","2022","T20","male",10
+"510","Guernsey","2023","T20","male",3
+"511","Hong Kong","2008","ODI","male",2
+"512","Hong Kong","2014","T20","male",4
+"513","Hong Kong","2015","T20","male",7
+"514","Hong Kong","2016","ODI","male",5
+"515","Hong Kong","2016","T20","male",9
+"516","Hong Kong","2019","T20","female",8
+"517","Hong Kong","2019","T20","female",12
+"518","Hong Kong","2019","T20","male",6
+"519","Hong Kong","2019","T20","male",10
+"520","Hong Kong","2020","T20","male",9
+"521","Hong Kong","2021","T20","female",4
+"522","Hong Kong","2022","T20","female",13
+"523","Hong Kong","2022","T20","female",10
+"524","Hong Kong","2022","T20","male",13
+"525","Hong Kong","2022","T20","male",10
+"526","Hong Kong","2023","T20","female",17
+"527","Hong Kong","2023","T20","female",21
+"528","Hong Kong","2023","T20","male",11
+"529","Hong Kong","2023","T20","male",15
+"530","Hungary","2021","T20","male",4
+"531","Hungary","2022","T20","male",9
+"532","Hungary","2023","T20","male",4
+"533","India","2003","ODI","male",21
+"534","India","2004","ODI","male",23
+"535","India","2004","Test","male",7
+"536","India","2005","ODI","male",12
+"537","India","2005","Test","male",2
+"538","India","2006","ODI","male",26
+"539","India","2006","Test","female",5
+"540","India","2006","Test","male",10
+"541","India","2007","ODI","male",35
+"542","India","2007","T20","male",7
+"543","India","2007","Test","male",9
+"544","India","2008","ODI","female",2
+"545","India","2008","ODI","female",12
+"546","India","2008","ODI","male",11
+"547","India","2008","ODI","male",21
+"548","India","2008","Test","male",12
+"549","India","2009","ODI","female",15
+"550","India","2009","ODI","male",30
+"551","India","2009","T20","male",6
+"552","India","2009","T20","male",10
+"553","India","2009","Test","male",6
+"554","India","2010","ODI","male",16
+"555","India","2010","T20","female",3
+"556","India","2010","T20","male",5
+"557","India","2010","Test","male",13
+"558","India","2011","ODI","male",34
+"559","India","2011","T20","female",2
+"560","India","2011","T20","male",4
+"561","India","2011","Test","male",11
+"562","India","2012","ODI","female",10
+"563","India","2012","ODI","male",12
+"564","India","2012","T20","female",10
+"565","India","2012","T20","male",12
+"566","India","2012","Test","male",7
+"567","India","2013","ODI","male",31
+"568","India","2013","ODI","male",11
+"569","India","2013","Test","male",8
+"570","India","2014","ODI","female",12
+"571","India","2014","ODI","male",24
+"572","India","2014","T20","male",7
+"573","India","2015","ODI","male",7
+"574","India","2015","ODI","male",14
+"575","India","2015","Test","male",7
+"576","India","2016","ODI","female",6
+"577","India","2016","ODI","male",8
+"578","India","2016","T20","male",6
+"579","India","2016","T20","male",15
+"580","India","2016","Test","male",12
+"581","India","2017","ODI","female",22
+"582","India","2017","ODI","female",19
+"583","India","2017","ODI","male",26
+"584","India","2017","ODI","male",23
+"585","India","2017","T20","male",13
+"586","India","2017","Test","male",9
+"587","India","2018","ODI","female",7
+"588","India","2018","ODI","female",8
+"589","India","2018","ODI","male",13
+"590","India","2018","ODI","male",14
+"591","India","2018","T20","female",22
+"592","India","2018","T20","female",18
+"593","India","2018","T20","male",21
+"594","India","2018","T20","male",17
+"595","India","2018","Test","male",12
+"596","India","2019","ODI","female",11
+"597","India","2019","ODI","female",18
+"598","India","2019","ODI","male",21
+"599","India","2019","ODI","male",28
+"600","India","2019","T20","female",15
+"601","India","2019","T20","female",20
+"602","India","2019","T20","male",11
+"603","India","2019","T20","male",16
+"604","India","2019","Test","male",8
+"605","India","2020","ODI","male",7
+"606","India","2020","T20","female",10
+"607","India","2020","T20","female",11
+"608","India","2020","T20","male",9
+"609","India","2020","T20","male",10
+"610","India","2020","Test","male",4
+"611","India","2021","ODI","female",11
+"612","India","2021","ODI","female",7
+"613","India","2021","ODI","male",10
+"614","India","2021","ODI","male",6
+"615","India","2021","T20","female",9
+"616","India","2021","T20","female",14
+"617","India","2021","T20","male",11
+"618","India","2021","T20","male",16
+"619","India","2021","Test","female",2
+"620","India","2021","Test","female",9
+"621","India","2021","Test","male",7
+"622","India","2021","Test","male",14
+"623","India","2022","ODI","female",18
+"624","India","2022","ODI","female",18
+"625","India","2022","ODI","male",24
+"626","India","2022","ODI","male",24
+"627","India","2022","T20","female",25
+"628","India","2022","T20","female",39
+"629","India","2022","T20","male",26
+"630","India","2022","T20","male",40
+"631","India","2022","Test","male",7
+"632","India","2023","ODI","female",5
+"633","India","2023","ODI","female",22
+"634","India","2023","ODI","male",18
+"635","India","2023","ODI","male",35
+"636","India","2023","T20","female",19
+"637","India","2023","T20","female",22
+"638","India","2023","T20","male",20
+"639","India","2023","T20","male",23
+"640","India","2023","Test","female",2
+"641","India","2023","Test","female",4
+"642","India","2023","Test","male",6
+"643","India","2023","Test","male",8
+"644","Indonesia","2019","T20","female",3
+"645","Indonesia","2022","T20","male",6
+"646","Indonesia","2023","T20","female",5
+"647","Indonesia","2023","T20","female",10
+"648","Indonesia","2023","T20","male",7
+"649","Indonesia","2023","T20","male",12
+"650","Ireland","2007","ODI","male",12
+"651","Ireland","2009","T20","male",5
+"652","Ireland","2010","ODI","male",5
+"653","Ireland","2011","ODI","male",9
+"654","Ireland","2012","T20","male",3
+"655","Ireland","2013","ODI","male",3
+"656","Ireland","2013","ODI","male",5
+"657","Ireland","2013","T20","male",4
+"658","Ireland","2014","ODI","male",5
+"659","Ireland","2014","T20","male",4
+"660","Ireland","2015","ODI","male",7
+"661","Ireland","2015","T20","female",4
+"662","Ireland","2015","T20","female",5
+"663","Ireland","2015","T20","male",4
+"664","Ireland","2015","T20","male",5
+"665","Ireland","2016","ODI","male",3
+"666","Ireland","2016","ODI","male",7
+"667","Ireland","2016","T20","female",5
+"668","Ireland","2016","T20","female",7
+"669","Ireland","2016","T20","male",6
+"670","Ireland","2016","T20","male",8
+"671","Ireland","2017","ODI","female",9
+"672","Ireland","2017","ODI","male",13
+"673","Ireland","2018","ODI","female",5
+"674","Ireland","2018","ODI","male",8
+"675","Ireland","2018","T20","female",13
+"676","Ireland","2018","T20","female",9
+"677","Ireland","2018","T20","male",12
+"678","Ireland","2018","T20","male",8
+"679","Ireland","2019","ODI","male",14
+"680","Ireland","2019","T20","female",13
+"681","Ireland","2019","T20","female",16
+"682","Ireland","2019","T20","male",19
+"683","Ireland","2019","T20","male",22
+"684","Ireland","2020","ODI","male",6
+"685","Ireland","2021","ODI","female",4
+"686","Ireland","2021","ODI","female",8
+"687","Ireland","2021","ODI","male",10
+"688","Ireland","2021","ODI","male",14
+"689","Ireland","2021","T20","female",11
+"690","Ireland","2021","T20","female",9
+"691","Ireland","2021","T20","male",18
+"692","Ireland","2021","T20","male",16
+"693","Ireland","2022","ODI","female",9
+"694","Ireland","2022","ODI","female",6
+"695","Ireland","2022","ODI","male",9
+"696","Ireland","2022","ODI","male",6
+"697","Ireland","2022","T20","female",16
+"698","Ireland","2022","T20","female",16
+"699","Ireland","2022","T20","male",27
+"700","Ireland","2022","T20","male",27
+"701","Ireland","2023","ODI","female",8
+"702","Ireland","2023","ODI","female",10
+"703","Ireland","2023","ODI","male",18
+"704","Ireland","2023","ODI","male",20
+"705","Ireland","2023","T20","female",12
+"706","Ireland","2023","T20","female",11
+"707","Ireland","2023","T20","male",17
+"708","Ireland","2023","T20","male",16
+"709","Ireland","2023","Test","male",4
+"710","Isle of Man","2022","T20","male",5
+"711","Isle of Man","2023","T20","female",8
+"712","Isle of Man","2023","T20","male",5
+"713","Israel","2022","T20","male",3
+"714","Italy","2019","T20","male",4
+"715","Italy","2021","T20","male",6
+"716","Italy","2022","T20","male",8
+"717","Italy","2023","T20","female",5
+"718","Italy","2023","T20","female",8
+"719","Italy","2023","T20","male",5
+"720","Italy","2023","T20","male",8
+"721","Japan","2019","T20","female",6
+"722","Japan","2022","T20","female",4
+"723","Japan","2022","T20","female",6
+"724","Japan","2022","T20","male",3
+"725","Japan","2022","T20","male",5
+"726","Japan","2023","T20","female",10
+"727","Japan","2023","T20","female",11
+"728","Jersey","2019","T20","male",10
+"729","Jersey","2021","T20","male",6
+"730","Jersey","2022","T20","male",5
+"731","Jersey","2022","T20","male",4
+"732","Jersey","2023","ODI","male",4
+"733","Jersey","2023","T20","female",8
+"734","Jersey","2023","T20","female",9
+"735","Jersey","2023","T20","male",5
+"736","Jersey","2023","T20","male",6
+"737","Kenya","2003","ODI","male",11
+"738","Kenya","2004","ODI","male",2
+"739","Kenya","2007","ODI","male",9
+"740","Kenya","2009","ODI","male",2
+"741","Kenya","2011","ODI","male",6
+"742","Kenya","2013","T20","male",6
+"743","Kenya","2014","ODI","male",2
+"744","Kenya","2019","T20","male",4
+"745","Kenya","2019","T20","male",8
+"746","Kenya","2021","T20","female",4
+"747","Kenya","2021","T20","female",7
+"748","Kenya","2021","T20","male",8
+"749","Kenya","2021","T20","male",11
+"750","Kenya","2022","T20","female",12
+"751","Kenya","2022","T20","female",15
+"752","Kenya","2022","T20","male",11
+"753","Kenya","2022","T20","male",14
+"754","Kenya","2023","T20","female",8
+"755","Kenya","2023","T20","female",9
+"756","Kenya","2023","T20","male",14
+"757","Kenya","2023","T20","male",15
+"758","Kuwait","2019","T20","female",6
+"759","Kuwait","2019","T20","female",6
+"760","Kuwait","2020","T20","male",3
+"761","Kuwait","2021","T20","female",5
+"762","Kuwait","2021","T20","female",4
+"763","Kuwait","2021","T20","male",4
+"764","Kuwait","2021","T20","male",3
+"765","Kuwait","2022","T20","female",9
+"766","Kuwait","2022","T20","female",11
+"767","Kuwait","2022","T20","male",4
+"768","Kuwait","2022","T20","male",6
+"769","Kuwait","2023","T20","female",7
+"770","Kuwait","2023","T20","female",6
+"771","Kuwait","2023","T20","male",18
+"772","Kuwait","2023","T20","male",17
+"773","Lesotho","2018","T20","female",5
+"774","Lesotho","2021","T20","male",3
+"775","Lesotho","2022","T20","male",5
+"776","Luxembourg","2021","T20","male",6
+"777","Luxembourg","2022","T20","male",9
+"778","Luxembourg","2023","T20","male",11
+"779","Malawi","2018","T20","female",3
+"780","Malawi","2021","T20","male",5
+"781","Malawi","2023","T20","female",3
+"782","Malaysia","2018","T20","female",5
+"783","Malaysia","2019","T20","female",8
+"784","Malaysia","2019","T20","female",18
+"785","Malaysia","2019","T20","male",4
+"786","Malaysia","2019","T20","male",14
+"787","Malaysia","2020","T20","male",8
+"788","Malaysia","2021","T20","female",2
+"789","Malaysia","2021","T20","female",4
+"790","Malaysia","2021","T20","male",4
+"791","Malaysia","2021","T20","male",6
+"792","Malaysia","2022","T20","female",19
+"793","Malaysia","2022","T20","female",20
+"794","Malaysia","2022","T20","male",17
+"795","Malaysia","2022","T20","male",18
+"796","Malaysia","2023","T20","female",18
+"797","Malaysia","2023","T20","female",14
+"798","Malaysia","2023","T20","male",16
+"799","Malaysia","2023","T20","male",12
+"800","Maldives","2019","T20","female",5
+"801","Maldives","2019","T20","male",6
+"802","Maldives","2021","T20","male",4
+"803","Maldives","2022","T20","male",4
+"804","Maldives","2023","T20","male",5
+"805","Mali","2022","T20","male",5
+"806","Malta","2021","T20","male",13
+"807","Malta","2022","T20","male",9
+"808","Malta","2023","T20","female",11
+"809","Malta","2023","T20","female",3
+"810","Malta","2023","T20","male",21
+"811","Malta","2023","T20","male",13
+"812","Mozambique","2019","T20","female",3
+"813","Mozambique","2021","T20","female",4
+"814","Mozambique","2021","T20","female",4
+"815","Mozambique","2021","T20","male",4
+"816","Mozambique","2021","T20","male",4
+"817","Mozambique","2022","T20","male",9
+"818","Mozambique","2023","T20","female",3
+"819","Myanmar","2023","T20","female",6
+"820","Myanmar","2023","T20","female",5
+"821","Myanmar","2023","T20","male",5
+"822","Myanmar","2023","T20","male",4
+"823","Namibia","2018","T20","female",6
+"824","Namibia","2019","ODI","male",4
+"825","Namibia","2019","T20","female",12
+"826","Namibia","2019","T20","female",12
+"827","Namibia","2019","T20","male",16
+"828","Namibia","2019","T20","male",16
+"829","Namibia","2020","ODI","male",3
+"830","Namibia","2021","T20","female",7
+"831","Namibia","2021","T20","female",7
+"832","Namibia","2021","T20","male",13
+"833","Namibia","2021","T20","male",13
+"834","Namibia","2022","ODI","male",20
+"835","Namibia","2022","T20","female",12
+"836","Namibia","2022","T20","female",11
+"837","Namibia","2022","T20","male",11
+"838","Namibia","2022","T20","male",10
+"839","Namibia","2023","ODI","male",10
+"840","Namibia","2023","T20","female",16
+"841","Namibia","2023","T20","female",12
+"842","Namibia","2023","T20","male",15
+"843","Namibia","2023","T20","male",11
+"844","Nepal","2015","T20","male",5
+"845","Nepal","2019","T20","female",9
+"846","Nepal","2019","T20","female",12
+"847","Nepal","2019","T20","male",16
+"848","Nepal","2019","T20","male",19
+"849","Nepal","2021","ODI","male",5
+"850","Nepal","2021","T20","female",6
+"851","Nepal","2021","T20","female",6
+"852","Nepal","2021","T20","male",5
+"853","Nepal","2021","T20","male",5
+"854","Nepal","2022","ODI","male",21
+"855","Nepal","2022","T20","female",10
+"856","Nepal","2022","T20","female",10
+"857","Nepal","2022","T20","male",17
+"858","Nepal","2022","T20","male",17
+"859","Nepal","2023","ODI","male",21
+"860","Nepal","2023","T20","female",18
+"861","Nepal","2023","T20","female",13
+"862","Nepal","2023","T20","male",17
+"863","Nepal","2023","T20","male",12
+"864","Netherlands","2003","ODI","male",5
+"865","Netherlands","2007","ODI","male",5
+"866","Netherlands","2009","T20","male",2
+"867","Netherlands","2011","ODI","male",7
+"868","Netherlands","2013","ODI","male",3
+"869","Netherlands","2013","T20","male",6
+"870","Netherlands","2014","ODI","male",2
+"871","Netherlands","2014","T20","male",4
+"872","Netherlands","2015","T20","male",6
+"873","Netherlands","2018","T20","female",5
+"874","Netherlands","2018","T20","female",4
+"875","Netherlands","2018","T20","male",6
+"876","Netherlands","2018","T20","male",5
+"877","Netherlands","2019","T20","female",11
+"878","Netherlands","2019","T20","female",15
+"879","Netherlands","2019","T20","male",19
+"880","Netherlands","2019","T20","male",23
+"881","Netherlands","2021","ODI","male",6
+"882","Netherlands","2021","T20","female",7
+"883","Netherlands","2021","T20","female",11
+"884","Netherlands","2021","T20","male",4
+"885","Netherlands","2021","T20","male",8
+"886","Netherlands","2022","ODI","female",7
+"887","Netherlands","2022","ODI","female",10
+"888","Netherlands","2022","ODI","male",12
+"889","Netherlands","2022","ODI","male",15
+"890","Netherlands","2022","T20","female",8
+"891","Netherlands","2022","T20","female",8
+"892","Netherlands","2022","T20","male",15
+"893","Netherlands","2022","T20","male",15
+"894","Netherlands","2023","ODI","female",2
+"895","Netherlands","2023","ODI","female",9
+"896","Netherlands","2023","ODI","male",15
+"897","Netherlands","2023","ODI","male",22
+"898","Netherlands","2023","T20","female",16
+"899","New Zealand","2003","ODI","male",23
+"900","New Zealand","2004","ODI","male",9
+"901","New Zealand","2004","Test","male",5
+"902","New Zealand","2005","ODI","male",8
+"903","New Zealand","2005","T20","male",2
+"904","New Zealand","2005","Test","male",5
+"905","New Zealand","2006","ODI","male",11
+"906","New Zealand","2006","Test","male",6
+"907","New Zealand","2007","ODI","male",17
+"908","New Zealand","2007","ODI","male",26
+"909","New Zealand","2007","T20","male",8
+"910","New Zealand","2007","Test","male",2
+"911","New Zealand","2008","ODI","male",10
+"912","New Zealand","2008","T20","male",5
+"913","New Zealand","2008","Test","male",10
+"914","New Zealand","2009","ODI","male",18
+"915","New Zealand","2009","T20","female",7
+"916","New Zealand","2009","T20","male",9
+"917","New Zealand","2009","Test","male",7
+"918","New Zealand","2010","ODI","male",17
+"919","New Zealand","2010","T20","female",3
+"920","New Zealand","2010","T20","female",14
+"921","New Zealand","2010","T20","male",2
+"922","New Zealand","2010","T20","male",13
+"923","New Zealand","2010","Test","male",6
+"924","New Zealand","2011","ODI","male",13
+"925","New Zealand","2011","Test","male",5
+"926","New Zealand","2012","ODI","female",8
+"927","New Zealand","2012","ODI","male",13
+"928","New Zealand","2012","T20","female",4
+"929","New Zealand","2012","T20","female",8
+"930","New Zealand","2012","T20","male",7
+"931","New Zealand","2012","T20","male",11
+"932","New Zealand","2012","Test","male",9
+"933","New Zealand","2013","ODI","female",3
+"934","New Zealand","2013","ODI","female",7
+"935","New Zealand","2013","ODI","male",14
+"936","New Zealand","2013","ODI","male",18
+"937","New Zealand","2013","T20","male",6
+"938","New Zealand","2013","Test","male",12
+"939","New Zealand","2014","T20","male",8
+"940","New Zealand","2014","Test","male",7
+"941","New Zealand","2015","ODI","female",4
+"942","New Zealand","2015","ODI","female",22
+"943","New Zealand","2015","ODI","male",10
+"944","New Zealand","2015","ODI","male",28
+"945","New Zealand","2015","Test","male",7
+"946","New Zealand","2016","ODI","female",10
+"947","New Zealand","2016","ODI","female",15
+"948","New Zealand","2016","ODI","male",11
+"949","New Zealand","2016","ODI","male",16
+"950","New Zealand","2016","T20","female",6
+"951","New Zealand","2016","T20","female",8
+"952","New Zealand","2016","T20","male",8
+"953","New Zealand","2016","T20","male",10
+"954","New Zealand","2016","Test","male",11
+"955","New Zealand","2017","ODI","female",9
+"956","New Zealand","2017","ODI","female",13
+"957","New Zealand","2017","ODI","male",16
+"958","New Zealand","2017","ODI","male",20
+"959","New Zealand","2017","T20","female",7
+"960","New Zealand","2017","T20","male",8
+"961","New Zealand","2017","Test","male",7
+"962","New Zealand","2018","ODI","female",7
+"963","New Zealand","2018","ODI","female",11
+"964","New Zealand","2018","ODI","male",8
+"965","New Zealand","2018","ODI","male",12
+"966","New Zealand","2018","T20","female",17
+"967","New Zealand","2018","T20","female",12
+"968","New Zealand","2018","T20","male",15
+"969","New Zealand","2018","T20","male",10
+"970","New Zealand","2018","Test","male",6
+"971","New Zealand","2019","ODI","female",6
+"972","New Zealand","2019","ODI","female",18
+"973","New Zealand","2019","ODI","male",9
+"974","New Zealand","2019","ODI","male",21
+"975","New Zealand","2019","T20","male",6
+"976","New Zealand","2019","T20","male",12
+"977","New Zealand","2019","Test","male",8
+"978","New Zealand","2020","ODI","female",4
+"979","New Zealand","2020","ODI","female",6
+"980","New Zealand","2020","ODI","male",4
+"981","New Zealand","2020","ODI","male",6
+"982","New Zealand","2020","T20","female",11
+"983","New Zealand","2020","T20","female",12
+"984","New Zealand","2020","T20","male",10
+"985","New Zealand","2020","T20","male",11
+"986","New Zealand","2020","Test","male",6
+"987","New Zealand","2021","ODI","female",11
+"988","New Zealand","2021","ODI","female",8
+"989","New Zealand","2021","ODI","male",6
+"990","New Zealand","2021","ODI","male",3
+"991","New Zealand","2021","T20","female",9
+"992","New Zealand","2021","T20","female",20
+"993","New Zealand","2021","T20","male",12
+"994","New Zealand","2021","T20","male",23
+"995","New Zealand","2021","Test","male",6
+"996","New Zealand","2022","ODI","female",18
+"997","New Zealand","2022","ODI","female",15
+"998","New Zealand","2022","ODI","male",19
+"999","New Zealand","2022","ODI","male",16
+"1000","New Zealand","2022","T20","female",14
+"1001","New Zealand","2022","T20","female",21
+"1002","New Zealand","2022","T20","male",15
+"1003","New Zealand","2022","T20","male",22
+"1004","New Zealand","2022","Test","male",8
+"1005","New Zealand","2023","ODI","female",9
+"1006","New Zealand","2023","ODI","female",17
+"1007","New Zealand","2023","ODI","male",25
+"1008","New Zealand","2023","ODI","male",33
+"1009","New Zealand","2023","T20","female",13
+"1010","New Zealand","2023","T20","female",19
+"1011","New Zealand","2023","T20","male",15
+"1012","New Zealand","2023","T20","male",21
+"1013","New Zealand","2023","Test","male",7
+"1014","Nigeria","2019","T20","female",4
+"1015","Nigeria","2019","T20","male",8
+"1016","Nigeria","2021","T20","female",17
+"1017","Nigeria","2021","T20","female",8
+"1018","Nigeria","2021","T20","male",17
+"1019","Nigeria","2021","T20","male",8
+"1020","Nigeria","2022","T20","female",4
+"1021","Nigeria","2022","T20","female",5
+"1022","Nigeria","2022","T20","male",5
+"1023","Nigeria","2022","T20","male",6
+"1024","Nigeria","2023","T20","female",13
+"1025","Nigeria","2023","T20","female",3
+"1026","Nigeria","2023","T20","male",16
+"1027","Nigeria","2023","T20","male",6
+"1028","Norway","2022","T20","female",5
+"1029","Norway","2022","T20","male",8
+"1030","Norway","2023","T20","male",2
+"1031","Oman","2016","T20","male",5
+"1032","Oman","2019","ODI","male",5
+"1033","Oman","2019","T20","male",15
+"1034","Oman","2020","ODI","male",6
+"1035","Oman","2021","ODI","male",8
+"1036","Oman","2021","T20","male",3
+"1037","Oman","2022","ODI","male",16
+"1038","Oman","2022","T20","female",8
+"1039","Oman","2022","T20","female",9
+"1040","Oman","2022","T20","male",14
+"1041","Oman","2022","T20","male",15
+"1042","Oman","2023","ODI","male",9
+"1043","Oman","2023","T20","male",8
+"1044","Pakistan","2003","ODI","male",27
+"1045","Pakistan","2004","ODI","male",16
+"1046","Pakistan","2004","Test","male",2
+"1047","Pakistan","2005","ODI","male",12
+"1048","Pakistan","2006","ODI","male",19
+"1049","Pakistan","2006","Test","male",8
+"1050","Pakistan","2007","ODI","female",2
+"1051","Pakistan","2007","ODI","female",6
+"1052","Pakistan","2007","ODI","male",13
+"1053","Pakistan","2007","ODI","male",17
+"1054","Pakistan","2007","T20","male",9
+"1055","Pakistan","2007","Test","male",7
+"1056","Pakistan","2008","ODI","male",17
+"1057","Pakistan","2009","ODI","male",15
+"1058","Pakistan","2009","T20","male",8
+"1059","Pakistan","2009","Test","male",7
+"1060","Pakistan","2010","ODI","male",10
+"1061","Pakistan","2010","T20","male",15
+"1062","Pakistan","2010","Test","male",8
+"1063","Pakistan","2011","ODI","male",21
+"1064","Pakistan","2011","T20","male",3
+"1065","Pakistan","2011","Test","male",8
+"1066","Pakistan","2012","ODI","male",11
+"1067","Pakistan","2012","T20","female",3
+"1068","Pakistan","2012","T20","male",9
+"1069","Pakistan","2013","ODI","female",9
+"1070","Pakistan","2013","ODI","male",25
+"1071","Pakistan","2013","T20","female",5
+"1072","Pakistan","2013","T20","male",6
+"1073","Pakistan","2013","Test","male",5
+"1074","Pakistan","2014","ODI","female",4
+"1075","Pakistan","2014","ODI","male",10
+"1076","Pakistan","2014","T20","female",7
+"1077","Pakistan","2014","T20","female",6
+"1078","Pakistan","2014","T20","male",5
+"1079","Pakistan","2014","T20","male",4
+"1080","Pakistan","2015","ODI","male",11
+"1081","Pakistan","2015","ODI","male",17
+"1082","Pakistan","2015","T20","female",3
+"1083","Pakistan","2015","T20","female",3
+"1084","Pakistan","2015","T20","male",5
+"1085","Pakistan","2015","T20","male",5
+"1086","Pakistan","2016","ODI","female",7
+"1087","Pakistan","2016","ODI","male",9
+"1088","Pakistan","2016","T20","female",9
+"1089","Pakistan","2016","T20","female",11
+"1090","Pakistan","2016","T20","male",11
+"1091","Pakistan","2016","T20","male",13
+"1092","Pakistan","2016","Test","male",8
+"1093","Pakistan","2017","ODI","female",10
+"1094","Pakistan","2017","ODI","female",11
+"1095","Pakistan","2017","ODI","male",12
+"1096","Pakistan","2017","ODI","male",13
+"1097","Pakistan","2017","T20","male",10
+"1098","Pakistan","2018","ODI","female",3
+"1099","Pakistan","2018","ODI","female",7
+"1100","Pakistan","2018","ODI","male",10
+"1101","Pakistan","2018","ODI","male",14
+"1102","Pakistan","2018","T20","female",14
+"1103","Pakistan","2018","T20","female",14
+"1104","Pakistan","2018","T20","male",10
+"1105","Pakistan","2018","T20","male",10
+"1106","Pakistan","2018","Test","male",7
+"1107","Pakistan","2019","ODI","female",8
+"1108","Pakistan","2019","ODI","female",10
+"1109","Pakistan","2019","ODI","male",23
+"1110","Pakistan","2019","ODI","male",25
+"1111","Pakistan","2019","T20","female",12
+"1112","Pakistan","2019","T20","female",11
+"1113","Pakistan","2019","T20","male",11
+"1114","Pakistan","2019","T20","male",10
+"1115","Pakistan","2019","Test","male",6
+"1116","Pakistan","2020","T20","female",4
+"1117","Pakistan","2020","T20","female",7
+"1118","Pakistan","2020","T20","male",5
+"1119","Pakistan","2020","T20","male",8
+"1120","Pakistan","2020","Test","male",5
+"1121","Pakistan","2021","ODI","female",13
+"1122","Pakistan","2021","ODI","female",9
+"1123","Pakistan","2021","ODI","male",10
+"1124","Pakistan","2021","ODI","male",6
+"1125","Pakistan","2021","T20","female",6
+"1126","Pakistan","2021","T20","female",16
+"1127","Pakistan","2021","T20","male",19
+"1128","Pakistan","2021","T20","male",29
+"1129","Pakistan","2021","Test","male",9
+"1130","Pakistan","2022","ODI","female",13
+"1131","Pakistan","2022","ODI","female",13
+"1132","Pakistan","2022","ODI","male",9
+"1133","Pakistan","2022","ODI","male",9
+"1134","Pakistan","2022","T20","female",19
+"1135","Pakistan","2022","T20","female",24
+"1136","Pakistan","2022","T20","male",21
+"1137","Pakistan","2022","T20","male",26
+"1138","Pakistan","2022","Test","male",9
+"1139","Pakistan","2023","ODI","female",12
+"1140","Pakistan","2023","ODI","female",18
+"1141","Pakistan","2023","ODI","male",19
+"1142","Pakistan","2023","ODI","male",25
+"1143","Pakistan","2023","T20","female",17
+"1144","Pakistan","2023","T20","female",15
+"1145","Pakistan","2023","T20","male",13
+"1146","Pakistan","2023","T20","male",11
+"1147","Panama","2021","T20","male",3
+"1148","Panama","2023","T20","male",8
+"1149","Papua New Guinea","2018","T20","female",5
+"1150","Papua New Guinea","2019","ODI","male",9
+"1151","Papua New Guinea","2019","T20","female",10
+"1152","Papua New Guinea","2019","T20","female",13
+"1153","Papua New Guinea","2019","T20","male",9
+"1154","Papua New Guinea","2019","T20","male",12
+"1155","Papua New Guinea","2021","ODI","male",8
+"1156","Papua New Guinea","2021","T20","male",5
+"1157","Papua New Guinea","2022","ODI","male",18
+"1158","Papua New Guinea","2022","T20","female",4
+"1159","Papua New Guinea","2022","T20","female",4
+"1160","Papua New Guinea","2022","T20","male",12
+"1161","Papua New Guinea","2022","T20","male",12
+"1162","Papua New Guinea","2023","ODI","male",11
+"1163","Papua New Guinea","2023","T20","female",5
+"1164","Papua New Guinea","2023","T20","female",4
+"1165","Papua New Guinea","2023","T20","male",9
+"1166","Papua New Guinea","2023","T20","male",8
+"1167","Philippines","2019","T20","male",4
+"1168","Philippines","2022","T20","male",5
+"1169","Philippines","2023","T20","male",11
+"1170","Portugal","2022","T20","male",4
+"1171","Portugal","2023","T20","male",9
+"1172","Qatar","2020","T20","male",2
+"1173","Qatar","2021","T20","female",4
+"1174","Qatar","2021","T20","male",2
+"1175","Qatar","2022","T20","female",12
+"1176","Qatar","2022","T20","female",7
+"1177","Qatar","2022","T20","male",12
+"1178","Qatar","2022","T20","male",7
+"1179","Qatar","2023","T20","female",6
+"1180","Qatar","2023","T20","female",4
+"1181","Qatar","2023","T20","male",7
+"1182","Qatar","2023","T20","male",5
+"1183","Romania","2021","T20","male",8
+"1184","Romania","2022","T20","male",11
+"1185","Romania","2023","T20","female",3
+"1186","Romania","2023","T20","female",6
+"1187","Romania","2023","T20","male",7
+"1188","Romania","2023","T20","male",10
+"1189","Rwanda","2019","T20","female",6
+"1190","Rwanda","2021","T20","female",9
+"1191","Rwanda","2021","T20","female",10
+"1192","Rwanda","2021","T20","male",8
+"1193","Rwanda","2021","T20","male",9
+"1194","Rwanda","2022","T20","female",8
+"1195","Rwanda","2022","T20","female",4
+"1196","Rwanda","2022","T20","male",15
+"1197","Rwanda","2022","T20","male",11
+"1198","Rwanda","2023","T20","female",3
+"1199","Rwanda","2023","T20","female",17
+"1200","Rwanda","2023","T20","male",20
+"1201","Rwanda","2023","T20","male",34
+"1202","Samoa","2022","T20","male",5
+"1203","Samoa","2023","T20","female",5
+"1204","Saudi Arabia","2022","T20","female",5
+"1205","Saudi Arabia","2022","T20","female",6
+"1206","Saudi Arabia","2022","T20","male",6
+"1207","Saudi Arabia","2022","T20","male",7
+"1208","Saudi Arabia","2023","T20","male",5
+"1209","Scotland","2007","ODI","male",6
+"1210","Scotland","2008","ODI","male",3
+"1211","Scotland","2009","T20","male",2
+"1212","Scotland","2013","ODI","male",2
+"1213","Scotland","2014","ODI","male",6
+"1214","Scotland","2015","ODI","male",8
+"1215","Scotland","2015","T20","male",5
+"1216","Scotland","2016","T20","male",6
+"1217","Scotland","2017","ODI","male",3
+"1218","Scotland","2018","ODI","male",6
+"1219","Scotland","2018","T20","female",5
+"1220","Scotland","2018","T20","female",5
+"1221","Scotland","2018","T20","male",6
+"1222","Scotland","2018","T20","male",6
+"1223","Scotland","2019","ODI","male",9
+"1224","Scotland","2019","T20","female",13
+"1225","Scotland","2019","T20","female",8
+"1226","Scotland","2019","T20","male",19
+"1227","Scotland","2019","T20","male",14
+"1228","Scotland","2021","ODI","male",6
+"1229","Scotland","2021","T20","female",8
+"1230","Scotland","2021","T20","female",13
+"1231","Scotland","2021","T20","male",8
+"1232","Scotland","2021","T20","male",13
+"1233","Scotland","2022","ODI","male",20
+"1234","Scotland","2022","T20","female",11
+"1235","Scotland","2022","T20","female",5
+"1236","Scotland","2022","T20","male",11
+"1237","Scotland","2022","T20","male",5
+"1238","Scotland","2023","ODI","female",3
+"1239","Scotland","2023","ODI","female",9
+"1240","Scotland","2023","ODI","male",5
+"1241","Scotland","2023","ODI","male",11
+"1242","Scotland","2023","T20","female",11
+"1243","Scotland","2023","T20","female",10
+"1244","Serbia","2021","T20","male",3
+"1245","Serbia","2022","T20","male",12
+"1246","Serbia","2023","T20","male",5
+"1247","Seychelles","2021","T20","male",5
+"1248","Seychelles","2022","T20","male",5
+"1249","Sierra Leone","2018","T20","female",5
+"1250","Sierra Leone","2019","T20","female",2
+"1251","Sierra Leone","2021","T20","female",3
+"1252","Sierra Leone","2021","T20","female",3
+"1253","Sierra Leone","2021","T20","male",9
+"1254","Sierra Leone","2021","T20","male",9
+"1255","Sierra Leone","2022","T20","male",6
+"1256","Sierra Leone","2023","T20","female",5
+"1257","Sierra Leone","2023","T20","female",8
+"1258","Sierra Leone","2023","T20","male",6
+"1259","Sierra Leone","2023","T20","male",9
+"1260","Singapore","2019","T20","male",9
+"1261","Singapore","2019","T20","male",12
+"1262","Singapore","2022","T20","female",7
+"1263","Singapore","2022","T20","female",14
+"1264","Singapore","2022","T20","male",11
+"1265","Singapore","2022","T20","male",18
+"1266","Singapore","2023","T20","female",7
+"1267","Singapore","2023","T20","female",4
+"1268","Singapore","2023","T20","male",6
+"1269","Singapore","2023","T20","male",3
+"1270","Slovenia","2022","T20","male",4
+"1271","South Africa","2003","ODI","male",17
+"1272","South Africa","2003","Test","male",8
+"1273","South Africa","2004","ODI","male",7
+"1274","South Africa","2004","Test","male",4
+"1275","South Africa","2005","ODI","male",18
+"1276","South Africa","2005","Test","male",5
+"1277","South Africa","2006","ODI","male",22
+"1278","South Africa","2006","T20","male",3
+"1279","South Africa","2006","Test","male",10
+"1280","South Africa","2007","ODI","female",2
+"1281","South Africa","2007","ODI","female",10
+"1282","South Africa","2007","ODI","male",19
+"1283","South Africa","2007","ODI","male",27
+"1284","South Africa","2007","Test","male",8
+"1285","South Africa","2008","ODI","male",14
+"1286","South Africa","2008","Test","male",13
+"1287","South Africa","2009","ODI","male",3
+"1288","South Africa","2009","ODI","male",15
+"1289","South Africa","2009","T20","male",7
+"1290","South Africa","2009","T20","male",11
+"1291","South Africa","2010","ODI","male",13
+"1292","South Africa","2010","T20","male",11
+"1293","South Africa","2010","Test","male",10
+"1294","South Africa","2011","ODI","male",9
+"1295","South Africa","2011","ODI","male",15
+"1296","South Africa","2012","ODI","male",13
+"1297","South Africa","2012","T20","male",15
+"1298","South Africa","2012","Test","male",9
+"1299","South Africa","2013","ODI","male",12
+"1300","South Africa","2013","ODI","male",23
+"1301","South Africa","2013","T20","female",7
+"1302","South Africa","2013","T20","female",5
+"1303","South Africa","2013","T20","male",8
+"1304","South Africa","2013","T20","male",6
+"1305","South Africa","2013","Test","male",8
+"1306","South Africa","2014","T20","female",13
+"1307","South Africa","2014","T20","male",8
+"1308","South Africa","2014","Test","male",6
+"1309","South Africa","2015","ODI","male",21
+"1310","South Africa","2015","T20","male",9
+"1311","South Africa","2015","Test","male",8
+"1312","South Africa","2016","ODI","female",13
+"1313","South Africa","2016","ODI","female",15
+"1314","South Africa","2016","ODI","male",15
+"1315","South Africa","2016","ODI","male",17
+"1316","South Africa","2016","T20","female",8
+"1317","South Africa","2016","T20","female",10
+"1318","South Africa","2016","T20","male",7
+"1319","South Africa","2016","T20","male",9
+"1320","South Africa","2016","Test","male",8
+"1321","South Africa","2017","ODI","female",19
+"1322","South Africa","2017","ODI","female",19
+"1323","South Africa","2017","ODI","male",19
+"1324","South Africa","2017","ODI","male",19
+"1325","South Africa","2017","T20","male",9
+"1326","South Africa","2017","Test","male",12
+"1327","South Africa","2018","ODI","female",12
+"1328","South Africa","2018","ODI","female",13
+"1329","South Africa","2018","ODI","male",10
+"1330","South Africa","2018","ODI","male",11
+"1331","South Africa","2018","T20","female",18
+"1332","South Africa","2018","T20","female",11
+"1333","South Africa","2018","T20","male",13
+"1334","South Africa","2018","T20","male",6
+"1335","South Africa","2018","Test","male",9
+"1336","South Africa","2019","ODI","female",9
+"1337","South Africa","2019","ODI","female",15
+"1338","South Africa","2019","ODI","male",13
+"1339","South Africa","2019","ODI","male",19
+"1340","South Africa","2019","T20","female",11
+"1341","South Africa","2019","T20","female",10
+"1342","South Africa","2019","T20","male",9
+"1343","South Africa","2019","T20","male",8
+"1344","South Africa","2019","Test","male",8
+"1345","South Africa","2020","ODI","female",9
+"1346","South Africa","2020","T20","female",8
+"1347","South Africa","2020","T20","female",16
+"1348","South Africa","2020","Test","male",4
+"1349","South Africa","2021","ODI","female",13
+"1350","South Africa","2021","ODI","female",13
+"1351","South Africa","2021","ODI","male",10
+"1352","South Africa","2021","ODI","male",10
+"1353","South Africa","2021","T20","female",9
+"1354","South Africa","2021","T20","female",18
+"1355","South Africa","2021","T20","male",14
+"1356","South Africa","2021","T20","male",23
+"1357","South Africa","2021","Test","male",6
+"1358","South Africa","2022","ODI","female",18
+"1359","South Africa","2022","ODI","female",18
+"1360","South Africa","2022","ODI","male",12
+"1361","South Africa","2022","ODI","male",12
+"1362","South Africa","2022","T20","female",9
+"1363","South Africa","2022","T20","female",14
+"1364","South Africa","2022","T20","male",13
+"1365","South Africa","2022","T20","male",18
+"1366","South Africa","2022","Test","male",4
+"1367","South Africa","2022","Test","male",11
+"1368","South Africa","2023","ODI","female",9
+"1369","South Africa","2023","ODI","female",18
+"1370","South Africa","2023","ODI","male",16
+"1371","South Africa","2023","ODI","male",25
+"1372","South Africa","2023","T20","female",20
+"1373","South Africa","2023","T20","female",15
+"1374","South Africa","2023","T20","male",13
+"1375","South Africa","2023","T20","male",8
+"1376","South Africa","2023","Test","male",4
+"1377","South Korea","2022","T20","male",3
+"1378","Spain","2021","T20","male",3
+"1379","Spain","2022","T20","male",9
+"1380","Spain","2022","T20","male",12
+"1381","Spain","2023","T20","male",5
+"1382","Sri Lanka","2003","ODI","male",22
+"1383","Sri Lanka","2004","ODI","male",16
+"1384","Sri Lanka","2005","ODI","male",9
+"1385","Sri Lanka","2005","Test","male",4
+"1386","Sri Lanka","2006","ODI","male",25
+"1387","Sri Lanka","2006","Test","male",10
+"1388","Sri Lanka","2007","ODI","male",22
+"1389","Sri Lanka","2007","Test","male",7
+"1390","Sri Lanka","2008","ODI","female",2
+"1391","Sri Lanka","2008","ODI","female",5
+"1392","Sri Lanka","2008","ODI","male",12
+"1393","Sri Lanka","2008","ODI","male",15
+"1394","Sri Lanka","2008","Test","male",4
+"1395","Sri Lanka","2009","ODI","male",21
+"1396","Sri Lanka","2009","T20","male",13
+"1397","Sri Lanka","2009","Test","male",8
+"1398","Sri Lanka","2010","T20","male",9
+"1399","Sri Lanka","2011","ODI","male",21
+"1400","Sri Lanka","2011","Test","male",7
+"1401","Sri Lanka","2012","ODI","male",23
+"1402","Sri Lanka","2012","Test","male",5
+"1403","Sri Lanka","2013","ODI","female",12
+"1404","Sri Lanka","2013","ODI","male",20
+"1405","Sri Lanka","2013","T20","female",7
+"1406","Sri Lanka","2013","T20","female",7
+"1407","Sri Lanka","2013","T20","male",4
+"1408","Sri Lanka","2013","T20","male",4
+"1409","Sri Lanka","2013","Test","male",2
+"1410","Sri Lanka","2014","ODI","male",21
+"1411","Sri Lanka","2014","ODI","male",28
+"1412","Sri Lanka","2014","T20","male",11
+"1413","Sri Lanka","2014","T20","male",9
+"1414","Sri Lanka","2014","Test","male",7
+"1415","Sri Lanka","2015","ODI","female",7
+"1416","Sri Lanka","2015","ODI","male",19
+"1417","Sri Lanka","2015","Test","male",7
+"1418","Sri Lanka","2016","ODI","male",14
+"1419","Sri Lanka","2016","ODI","male",13
+"1420","Sri Lanka","2016","T20","female",5
+"1421","Sri Lanka","2016","T20","female",6
+"1422","Sri Lanka","2016","T20","male",14
+"1423","Sri Lanka","2016","T20","male",15
+"1424","Sri Lanka","2016","Test","male",5
+"1425","Sri Lanka","2017","ODI","female",12
+"1426","Sri Lanka","2017","ODI","female",13
+"1427","Sri Lanka","2017","ODI","male",18
+"1428","Sri Lanka","2017","ODI","male",19
+"1429","Sri Lanka","2017","T20","female",7
+"1430","Sri Lanka","2017","T20","male",13
+"1431","Sri Lanka","2017","Test","male",9
+"1432","Sri Lanka","2018","ODI","female",4
+"1433","Sri Lanka","2018","ODI","male",8
+"1434","Sri Lanka","2018","T20","female",11
+"1435","Sri Lanka","2018","T20","female",7
+"1436","Sri Lanka","2018","T20","male",11
+"1437","Sri Lanka","2018","T20","male",7
+"1438","Sri Lanka","2018","Test","male",9
+"1439","Sri Lanka","2019","ODI","female",9
+"1440","Sri Lanka","2019","ODI","female",10
+"1441","Sri Lanka","2019","ODI","male",20
+"1442","Sri Lanka","2019","ODI","male",21
+"1443","Sri Lanka","2019","T20","female",8
+"1444","Sri Lanka","2019","T20","female",8
+"1445","Sri Lanka","2019","T20","male",13
+"1446","Sri Lanka","2019","T20","male",13
+"1447","Sri Lanka","2019","Test","male",8
+"1448","Sri Lanka","2020","T20","female",6
+"1449","Sri Lanka","2020","T20","male",4
+"1450","Sri Lanka","2020","Test","male",3
+"1451","Sri Lanka","2021","ODI","male",15
+"1452","Sri Lanka","2021","T20","male",20
+"1453","Sri Lanka","2021","Test","male",9
+"1454","Sri Lanka","2022","ODI","female",6
+"1455","Sri Lanka","2022","ODI","female",7
+"1456","Sri Lanka","2022","ODI","male",10
+"1457","Sri Lanka","2022","ODI","male",11
+"1458","Sri Lanka","2022","T20","female",21
+"1459","Sri Lanka","2022","T20","female",17
+"1460","Sri Lanka","2022","T20","male",29
+"1461","Sri Lanka","2022","T20","male",25
+"1462","Sri Lanka","2022","Test","male",8
+"1463","Sri Lanka","2023","ODI","female",8
+"1464","Sri Lanka","2023","ODI","female",21
+"1465","Sri Lanka","2023","ODI","male",18
+"1466","Sri Lanka","2023","ODI","male",31
+"1467","Sri Lanka","2023","T20","female",16
+"1468","Sri Lanka","2023","T20","female",14
+"1469","Sri Lanka","2023","T20","male",9
+"1470","Sri Lanka","2023","T20","male",7
+"1471","Sri Lanka","2023","Test","male",6
+"1472","St Helena","2022","T20","male",4
+"1473","Sweden","2021","T20","female",4
+"1474","Sweden","2021","T20","male",6
+"1475","Sweden","2022","T20","female",3
+"1476","Sweden","2022","T20","male",9
+"1477","Sweden","2023","T20","female",6
+"1478","Sweden","2023","T20","female",6
+"1479","Sweden","2023","T20","male",2
+"1480","Sweden","2023","T20","male",2
+"1481","Switzerland","2021","T20","male",4
+"1482","Switzerland","2022","T20","male",5
+"1483","Tanzania","2019","T20","female",3
+"1484","Tanzania","2021","T20","female",6
+"1485","Tanzania","2021","T20","female",10
+"1486","Tanzania","2021","T20","male",6
+"1487","Tanzania","2021","T20","male",10
+"1488","Tanzania","2022","T20","female",7
+"1489","Tanzania","2022","T20","female",10
+"1490","Tanzania","2022","T20","male",18
+"1491","Tanzania","2022","T20","male",21
+"1492","Tanzania","2023","T20","female",8
+"1493","Tanzania","2023","T20","female",11
+"1494","Tanzania","2023","T20","male",14
+"1495","Tanzania","2023","T20","male",17
+"1496","Thailand","2018","T20","female",9
+"1497","Thailand","2019","T20","female",14
+"1498","Thailand","2019","T20","male",10
+"1499","Thailand","2020","T20","female",4
+"1500","Thailand","2020","T20","female",7
+"1501","Thailand","2022","ODI","female",4
+"1502","Thailand","2022","T20","female",15
+"1503","Thailand","2022","T20","female",11
+"1504","Thailand","2022","T20","male",9
+"1505","Thailand","2022","T20","male",5
+"1506","Thailand","2023","ODI","female",5
+"1507","Thailand","2023","T20","female",13
+"1508","Thailand","2023","T20","female",10
+"1509","Thailand","2023","T20","male",7
+"1510","Thailand","2023","T20","male",4
+"1511","Turkey","2022","T20","male",4
+"1512","Turkey","2023","T20","female",4
+"1513","Turkey","2023","T20","female",3
+"1514","Turkey","2023","T20","male",4
+"1515","Turkey","2023","T20","male",3
+"1516","Uganda","2018","T20","female",4
+"1517","Uganda","2019","T20","female",9
+"1518","Uganda","2021","T20","female",4
+"1519","Uganda","2021","T20","female",10
+"1520","Uganda","2021","T20","male",14
+"1521","Uganda","2021","T20","male",20
+"1522","Uganda","2022","T20","female",17
+"1523","Uganda","2022","T20","female",24
+"1524","Uganda","2022","T20","male",15
+"1525","Uganda","2022","T20","male",22
+"1526","Uganda","2023","T20","female",10
+"1527","Uganda","2023","T20","female",21
+"1528","Uganda","2023","T20","male",16
+"1529","Uganda","2023","T20","male",27
+"1530","United Arab Emirates","2014","ODI","male",4
+"1531","United Arab Emirates","2015","ODI","male",7
+"1532","United Arab Emirates","2015","T20","male",4
+"1533","United Arab Emirates","2016","T20","male",13
+"1534","United Arab Emirates","2018","ODI","male",9
+"1535","United Arab Emirates","2018","T20","female",5
+"1536","United Arab Emirates","2018","T20","female",3
+"1537","United Arab Emirates","2019","ODI","male",9
+"1538","United Arab Emirates","2019","T20","female",19
+"1539","United Arab Emirates","2019","T20","male",15
+"1540","United Arab Emirates","2021","T20","female",5
+"1541","United Arab Emirates","2021","T20","female",3
+"1542","United Arab Emirates","2021","T20","male",5
+"1543","United Arab Emirates","2021","T20","male",3
+"1544","United Arab Emirates","2022","ODI","male",21
+"1545","United Arab Emirates","2022","T20","female",27
+"1546","United Arab Emirates","2022","T20","female",29
+"1547","United Arab Emirates","2022","T20","male",14
+"1548","United Arab Emirates","2022","T20","male",16
+"1549","United Arab Emirates","2023","ODI","male",26
+"1550","United Arab Emirates","2023","T20","female",18
+"1551","United Arab Emirates","2023","T20","female",15
+"1552","United Arab Emirates","2023","T20","male",23
+"1553","United Arab Emirates","2023","T20","male",20
+"1554","United States of America","2004","ODI","male",2
+"1555","United States of America","2019","ODI","male",8
+"1556","United States of America","2019","T20","female",6
+"1557","United States of America","2019","T20","female",5
+"1558","United States of America","2019","T20","male",9
+"1559","United States of America","2019","T20","male",8
+"1560","United States of America","2021","ODI","male",4
+"1561","United States of America","2021","T20","female",4
+"1562","United States of America","2021","T20","male",7
+"1563","United States of America","2022","ODI","male",19
+"1564","United States of America","2022","T20","female",6
+"1565","United States of America","2022","T20","female",4
+"1566","United States of America","2022","T20","male",7
+"1567","United States of America","2022","T20","male",5
+"1568","United States of America","2023","ODI","male",11
+"1569","United States of America","2023","T20","female",6
+"1570","Vanuatu","2019","T20","male",12
+"1571","Vanuatu","2022","T20","male",5
+"1572","Vanuatu","2023","T20","female",6
+"1573","Vanuatu","2023","T20","female",6
+"1574","Vanuatu","2023","T20","male",6
+"1575","Vanuatu","2023","T20","male",6
+"1576","West Indies","2003","ODI","male",14
+"1577","West Indies","2003","Test","male",3
+"1578","West Indies","2004","ODI","male",16
+"1579","West Indies","2004","Test","male",3
+"1580","West Indies","2005","ODI","male",8
+"1581","West Indies","2005","Test","male",3
+"1582","West Indies","2006","ODI","male",28
+"1583","West Indies","2006","Test","male",6
+"1584","West Indies","2007","ODI","male",16
+"1585","West Indies","2007","Test","male",5
+"1586","West Indies","2008","ODI","male",15
+"1587","West Indies","2008","T20","male",4
+"1588","West Indies","2008","Test","male",7
+"1589","West Indies","2009","ODI","female",13
+"1590","West Indies","2009","ODI","male",18
+"1591","West Indies","2009","T20","female",3
+"1592","West Indies","2009","T20","male",8
+"1593","West Indies","2009","Test","male",11
+"1594","West Indies","2010","ODI","male",11
+"1595","West Indies","2010","T20","male",2
+"1596","West Indies","2010","T20","male",9
+"1597","West Indies","2010","Test","male",4
+"1598","West Indies","2011","ODI","male",28
+"1599","West Indies","2011","T20","male",5
+"1600","West Indies","2011","Test","male",10
+"1601","West Indies","2012","ODI","male",17
+"1602","West Indies","2012","T20","female",7
+"1603","West Indies","2012","T20","male",10
+"1604","West Indies","2012","Test","male",10
+"1605","West Indies","2013","ODI","female",14
+"1606","West Indies","2013","ODI","male",21
+"1607","West Indies","2013","T20","female",5
+"1608","West Indies","2013","T20","female",7
+"1609","West Indies","2013","T20","male",3
+"1610","West Indies","2013","T20","male",5
+"1611","West Indies","2013","Test","male",7
+"1612","West Indies","2014","ODI","female",11
+"1613","West Indies","2014","ODI","male",12
+"1614","West Indies","2014","T20","female",10
+"1615","West Indies","2014","T20","male",15
+"1616","West Indies","2014","Test","male",7
+"1617","West Indies","2015","ODI","male",13
+"1618","West Indies","2015","T20","female",4
+"1619","West Indies","2015","T20","male",5
+"1620","West Indies","2015","Test","male",8
+"1621","West Indies","2016","ODI","female",10
+"1622","West Indies","2016","ODI","male",11
+"1623","West Indies","2016","Test","male",5
+"1624","West Indies","2017","ODI","female",24
+"1625","West Indies","2017","ODI","male",21
+"1626","West Indies","2017","T20","male",2
+"1627","West Indies","2017","T20","male",10
+"1628","West Indies","2017","Test","male",10
+"1629","West Indies","2018","ODI","female",5
+"1630","West Indies","2018","ODI","female",8
+"1631","West Indies","2018","ODI","male",10
+"1632","West Indies","2018","ODI","male",13
+"1633","West Indies","2018","T20","female",12
+"1634","West Indies","2018","T20","female",10
+"1635","West Indies","2018","T20","male",17
+"1636","West Indies","2018","T20","male",15
+"1637","West Indies","2018","Test","male",9
+"1638","West Indies","2019","ODI","female",9
+"1639","West Indies","2019","ODI","female",13
+"1640","West Indies","2019","ODI","male",23
+"1641","West Indies","2019","ODI","male",27
+"1642","West Indies","2019","T20","female",15
+"1643","West Indies","2019","T20","female",11
+"1644","West Indies","2019","T20","male",16
+"1645","West Indies","2019","T20","male",12
+"1646","West Indies","2019","Test","male",6
+"1647","West Indies","2020","ODI","male",6
+"1648","West Indies","2020","T20","female",8
+"1649","West Indies","2020","T20","female",12
+"1650","West Indies","2020","T20","male",4
+"1651","West Indies","2020","T20","male",8
+"1652","West Indies","2021","ODI","female",13
+"1653","West Indies","2021","ODI","female",12
+"1654","West Indies","2021","ODI","male",10
+"1655","West Indies","2021","ODI","male",9
+"1656","West Indies","2021","T20","female",6
+"1657","West Indies","2021","T20","female",16
+"1658","West Indies","2021","T20","male",15
+"1659","West Indies","2021","T20","male",25
+"1660","West Indies","2021","Test","male",10
+"1661","West Indies","2022","ODI","female",18
+"1662","West Indies","2022","ODI","female",20
+"1663","West Indies","2022","ODI","male",19
+"1664","West Indies","2022","ODI","male",21
+"1665","West Indies","2022","T20","female",10
+"1666","West Indies","2022","T20","female",12
+"1667","West Indies","2022","T20","male",22
+"1668","West Indies","2022","T20","male",24
+"1669","West Indies","2023","ODI","female",6
+"1670","West Indies","2023","ODI","female",12
+"1671","West Indies","2023","ODI","male",12
+"1672","West Indies","2023","ODI","male",18
+"1673","West Indies","2023","T20","female",14
+"1674","West Indies","2023","T20","female",15
+"1675","West Indies","2023","T20","male",12
+"1676","West Indies","2023","T20","male",13
+"1677","West Indies","2023","Test","male",6
+"1678","Zimbabwe","2003","ODI","male",21
+"1679","Zimbabwe","2003","Test","male",3
+"1680","Zimbabwe","2004","ODI","male",19
+"1681","Zimbabwe","2005","ODI","male",5
+"1682","Zimbabwe","2005","Test","male",5
+"1683","Zimbabwe","2007","ODI","male",5
+"1684","Zimbabwe","2009","ODI","male",15
+"1685","Zimbabwe","2010","ODI","male",14
+"1686","Zimbabwe","2011","ODI","male",8
+"1687","Zimbabwe","2013","ODI","male",7
+"1688","Zimbabwe","2013","T20","male",4
+"1689","Zimbabwe","2014","ODI","male",11
+"1690","Zimbabwe","2015","ODI","male",15
+"1691","Zimbabwe","2015","T20","male",6
+"1692","Zimbabwe","2017","Test","male",4
+"1693","Zimbabwe","2018","ODI","male",18
+"1694","Zimbabwe","2018","T20","male",2
+"1695","Zimbabwe","2019","ODI","male",8
+"1696","Zimbabwe","2019","T20","male",17
+"1697","Zimbabwe","2020","Test","male",3
+"1698","Zimbabwe","2021","ODI","female",6
+"1699","Zimbabwe","2021","ODI","female",8
+"1700","Zimbabwe","2021","ODI","male",4
+"1701","Zimbabwe","2021","ODI","male",6
+"1702","Zimbabwe","2021","T20","female",8
+"1703","Zimbabwe","2021","T20","female",13
+"1704","Zimbabwe","2021","T20","male",12
+"1705","Zimbabwe","2021","T20","male",17
+"1706","Zimbabwe","2021","Test","male",5
+"1707","Zimbabwe","2022","ODI","male",15
+"1708","Zimbabwe","2022","T20","female",13
+"1709","Zimbabwe","2022","T20","female",21
+"1710","Zimbabwe","2022","T20","male",16
+"1711","Zimbabwe","2022","T20","male",24
+"1712","Zimbabwe","2023","ODI","female",3
+"1713","Zimbabwe","2023","ODI","female",12
+"1714","Zimbabwe","2023","ODI","male",7
+"1715","Zimbabwe","2023","ODI","male",16
+"1716","Zimbabwe","2023","T20","female",8
+"1717","Zimbabwe","2023","T20","female",11
+"1718","Zimbabwe","2023","T20","male",14
+"1719","Zimbabwe","2023","T20","male",17
+"1720","Zimbabwe","2023","Test","male",2
