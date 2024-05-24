@@ -57,18 +57,16 @@ game_types = c("T20", "ODI", "Test")
 
 genderColour <- colorFactor(palette = c( "pink", "steelblue1"), domain=c("female", "male"))
 create_games_played_graph = function(team) {
+  data_counts_team <- data_counts
   if(team != "World") {
     data_counts_team <- data_counts %>% filter(team_1==team)
-    data_counts_team$colour <- lapply(data_counts_team$gender, genderColour)
-    data_counts_team <- data_counts_team[order(data_counts_team$gender),]
-    gender_pallete = sapply(unique(data_counts_team$gender), genderColour)
-    p <- ggplot(data_counts_team, aes(x=as.numeric(year.x),y=n,fill=colour))+geom_col()+
-      labs(title=team, x="Year",  y="Matches Played",colour="Match Type", fill="Gender")+expand_limits(y=0)+
-      scale_colour_identity()+facet_wrap(vars(match_type.x))
-    return(p)
   }
-  p <- ggplot(data_counts,  aes(x=as.numeric(year.x),y=n,colour=match_type.x))+geom_smooth()+
-    labs(title=team, x="Year",  y="Matches Played",colour="Match Type")+expand_limits(y=0)
+  data_counts_team$colour <- lapply(data_counts_team$gender, genderColour)
+  data_counts_team <- data_counts_team[order(data_counts_team$gender),]
+  gender_pallete = sapply(unique(data_counts_team$gender), genderColour)
+  p <- ggplot(data_counts_team, aes(x=as.numeric(year.x),y=n,fill=colour))+geom_col()+
+    labs(title=team, x="Year",  y="Matches Played",colour="Match Type", fill="Gender")+expand_limits(y=0)+
+    scale_colour_identity()+facet_wrap(vars(match_type.x))
   return(p)
 }
 
@@ -88,6 +86,8 @@ cpal_runs = colorNumeric("Blues", data_runs$runsAvg)
 
 
 shinyServer(function(input, output) {
+  
+  # FIRST PLOT
   
   p <- reactive(create_games_played_graph(input$country))
   output$country_plot <- renderPlot(p())
@@ -116,6 +116,8 @@ shinyServer(function(input, output) {
   
    runs <- reactive(filter(data_runs, year==format(input$runsYear, "%Y"), 
                     match_type %in% game_forms()) %>% group_by(batting) %>% summarise(n=mean(runsAvg)))
+   
+   # SECOND plot
    
    runs_list <- reactive(runs()$n[match(firstPartNames, runs()$batting)])
    output$runsMap <- renderLeaflet(leaflet(worldMap) %>% 
