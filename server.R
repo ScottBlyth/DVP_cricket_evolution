@@ -45,6 +45,7 @@ func <- function(x) {
   
 }
 data_counts$team_1 <- lapply(data_counts$team_1, func)
+data_runs$batting <- lapply(data_runs$batting, func)
 
 worldMap <- map("world", fill = TRUE, plot = FALSE) 
 
@@ -54,13 +55,16 @@ firstPartNames <- lapply(splitNames, function(x) x[1])
 
 game_types = c("T20", "ODI", "Test")
 
-genderColour <- colorFactor(palette = c( "steelblue1", "maroon1"), domain=c("male", "female"))
+genderColour <- colorFactor(palette = c( "pink", "steelblue1"), domain=c("female", "male"))
 create_games_played_graph = function(team) {
   if(team != "World") {
     data_counts_team <- data_counts %>% filter(team_1==team)
-    p <- ggplot(data_counts_team, aes(x=as.numeric(year.x),y=n,fill=genderColour(gender)))+geom_col()+
+    data_counts_team$colour <- lapply(data_counts_team$gender, genderColour)
+    data_counts_team <- data_counts_team[order(data_counts_team$gender),]
+    gender_pallete = sapply(unique(data_counts_team$gender), genderColour)
+    p <- ggplot(data_counts_team, aes(x=as.numeric(year.x),y=n,fill=colour))+geom_col()+
       labs(title=team, x="Year",  y="Matches Played",colour="Match Type", fill="Gender")+expand_limits(y=0)+
-      scale_color_manual(values=c("male", "female"))
+      scale_colour_identity()+facet_wrap(vars(match_type.x))
     return(p)
   }
   p <- ggplot(data_counts,  aes(x=as.numeric(year.x),y=n,colour=match_type.x))+geom_smooth()+
