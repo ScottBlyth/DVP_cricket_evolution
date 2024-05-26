@@ -24,6 +24,8 @@ dashboardPage(
     checkboxInput("T20", "T20", value=TRUE),
     checkboxInput("ODI", "ODI", value=TRUE),
     checkboxInput("Test", "Test", value=TRUE),
+    checkboxInput("male", "Male", value=TRUE),
+    checkboxInput("female", "Female", value=TRUE),
     textInput("country", "Country", value="World")
     ,width=2),
     mainPanel(
