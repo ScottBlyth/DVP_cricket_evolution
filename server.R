@@ -10,7 +10,8 @@ library(comprehenr)
 library(leafpop)
 library(ggplot2)
 library(gganimate)
-
+library(extrafont)
+loadfonts(device = "win")
 
 
 data <- read.csv("cricsheet_data.csv")
@@ -87,7 +88,7 @@ data_runs$batting <- lapply(data_runs$batting, func)
 # reference
 # https://www.youtube.com/watch?v=FOEoKbRUsT8
 
-
+make_anim <- function() {
 counts_anim <- data_counts %>% 
               group_by(year, team_1) %>% 
               reframe(n=sum(n, na.rm=TRUE))
@@ -109,26 +110,32 @@ df_ranked <- df2 %>%
   group_by(year) %>% 
   arrange(year, -n) %>% 
   mutate(rank = 1:n()) %>% 
-  filter(rank <= 10)
+  filter(rank <= 15)
 
 chart <- ggplot(df_ranked, aes(rank, n))+
-  geom_bar(stat="identity")+
+  geom_bar(stat="identity", aes(fill=team_1))+
   coord_flip()+
   scale_x_reverse()+
+  labs(y="Matches Played Across all Cricket")+
   geom_text(aes(rank, y=0, label=team_1),
-            hjust=0, fontface="bold", size=3)+
+            hjust=0,colour="black",family="sans", fontface="bold", size=8)+
   geom_text(aes(label=sprintf("%1.0f", n)), 
             hjust=1.1, fontface="bold", size=3)+
+  geom_text(aes(label=sprintf("%1.0f", year),x=16, y=15), fontface="bold", size=5)+
   theme_minimal()+
     theme(pane.grid=element_blank(),
+          axis.title.y=element_blank(),
+          axis.text.y=element_blank(),
+          axis.ticks.y=element_blank(),
           legend.position = "none",
           plot.margin = margin(1,6,1,6), "cm")
   
+  
 animation <- chart + 
-    transition_states(year, transition_length=10, state_length=1)+
-    view_follow(fixed_x=TRUE)+
-    ease_aes('quadratic-in-out')
-          
+    transition_states(year, transition_length=5, state_length=5)+
+    ease_aes('linear')
+    return(animation)
+}
 
 worldMap <- map("world", fill = TRUE, plot = FALSE) 
 

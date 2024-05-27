@@ -41,8 +41,9 @@ dashboardPage(
                            two decades. However, they mostly participtate in T20/ODI, with very few games played in the Test cricket format relative to men")),
         )
       ),
-  h1("Batting Performance: Average Runs of Each Country by Year", class="subtitle"),
+  img(src="matches_played_race.gif",align="center", height='850px', width='1400px'),
   
+  h1("Batting Performance: Average Runs of Each Country by Year", class="subtitle"),
   
   sidebarLayout(
     sidebarPanel(
@@ -54,6 +55,6 @@ dashboardPage(
         plotOutput("runsGraph", height="200px", width="100%")
       )
     )
-  )
+  ),
 )
 ))
