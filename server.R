@@ -15,6 +15,7 @@ library(gganimate)
 
 data <- read.csv("cricsheet_data.csv")
 
+
 data_wins_1 = data %>% group_by(match.id, winner,match_type) %>%
   reframe(team=team_1,gender=gender,
           match_type=match_type,year=format(as.Date(start.date, "%Y-%m-%d"), "%Y")) %>%
@@ -30,7 +31,7 @@ data_wins = rbind(data_wins_1, data_wins_2) %>% group_by(team, year,match_type, 
   reframe(wins=sum(wins), games_played=sum(games_played), match_type=match_type)
 
 
-data_counts <- read.csv("games_played2.csv")
+data_counts <- read.csv("games_played.csv")
 
 data_runs <- data %>% 
   reframe(gender=gender, batting=team.batting,runs=runs, match_type=match_type,year=format(as.Date(start.date, "%Y-%m-%d"), "%Y")) %>% 
@@ -39,17 +40,17 @@ data_runs <- data %>%
 
 get_location <- memoise(geocode_OSM)
  
-  #  data_games = data %>% 
-  #            reframe(gender=gender, id=match.id, team_1=team_1, team_2=team_2, match_type=match_type,year=format(as.Date(start.date, "%Y-%m-%d"), "%Y")) %>% 
-  #            group_by(id, team_1, team_2,match_type, year, gender) 
-  # 
-  # 
-  # data_count <- data_games %>% group_by(team_1, year, match_type, gender) %>% tally() %>% reframe(n=n)
-  # data_count2 <- data_games %>% group_by(team_2, year, match_type, gender) %>% tally() %>%
-  #           reframe(team_1=team_2,gender=gender, year=year,match_type=match_type, n=n)
-  # data_count3 <- merge(x=data_count, y=data_count2, by.x="team_1", by.y="team_1", all = TRUE) %>% 
-  #   filter(year.x==year.y,match_type.x==match_type.y, team_1!="ICC World XI") %>% group_by(team_1, year.x, match_type.x, gender) %>% 
-  #   reframe(n=n.x+n.y, lat=get_location(team_1)$coords[1], long=get_location(team_1)$coords[2])
+# data_games = data %>% 
+#   reframe(gender=gender, id=match.id, team_1=team_1, team_2=team_2, match_type=match_type,year=format(as.Date(start.date, "%Y-%m-%d"), "%Y")) %>% 
+#     group_by(id, team_1, team_2,match_type, year, gender) %>% tally()
+# 
+#    data_count <- data_games %>% group_by(team_1, year, match_type, gender) %>% tally()
+#    data_count2 <- data_games %>% group_by(team_2, year, match_type, gender) %>% tally()
+#   #           reframe(team_1=team_2,gender=gender, year=year,match_type=match_type, n=n)
+#     data_count3 <- full_join(x=data_count,y=data_count2, by=join_by(team_1==team_2, year==year, match_type==match_type, 
+#                                                                     gender==gender)) %>% 
+#       filter(team_1!="ICC World XI") %>%
+#       mutate(n=n.x+n.y)
   # 
   # data_count3$lat = apply(data_count3$team_1, function(x) {return(get_location(x)$coords[[1]][1])})
   # data_count3$long = apply(data_count3$team_1, function(x) {return(get_location(x)$coords[[2]])})
@@ -118,22 +119,25 @@ animation <- chart +
 
 
 counts_anim <- data_counts %>% 
-              group_by(year.x, team_1) %>% 
-              summarise(n=sum(n))
+              group_by(year, team_1) %>% 
+              reframe(n=sum(n, na.rm=TRUE))
+
+counts_anim <- counts_anim %>% group_by(team_1) %>% 
+              mutate(n=cumsum(n))
 
 counts_anim <- counts_anim %>%
   pivot_wider(names_from = team_1,
               values_from = n) %>%
-              fill(-year.x)
+              fill(-year)
 
 df2 <- counts_anim %>% 
   gather(key = team_1, 
-         value = n, -year.x)
-
+         value = n, -year)
+df2 <- df2[order(df2$year),]
 
 df_ranked <- df2 %>% 
-  group_by(year.x) %>% 
-  arrange(year.x, -n) %>% 
+  group_by(year) %>% 
+  arrange(year, -n) %>% 
   mutate(rank = 1:n()) %>% 
   filter(rank <= 10)
 
@@ -151,7 +155,7 @@ chart <- ggplot(df_ranked, aes(rank, n))+
           plot.margin = margin(1,6,1,6), "cm")
   
 animation <- chart + 
-    transition_states(year.x, transition_length=2, state_length=0)+
+    transition_states(year, transition_length=10, state_length=0)+
     view_follow(fixed_x=TRUE)+
     ease_aes('quadratic-in-out')
           
