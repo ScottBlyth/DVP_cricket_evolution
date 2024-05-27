@@ -119,13 +119,43 @@ animation <- chart +
 
 counts_anim <- data_counts %>% 
               group_by(year.x, team_1) %>% 
-              summarise(n=sum(n)) %>% 
-              reframe(year=as.Date(year.x, "%Y"))
+              summarise(n=sum(n))
+
 counts_anim <- counts_anim %>%
   pivot_wider(names_from = team_1,
               values_from = n) %>%
-              fill(-year)
+              fill(-year.x)
 
+df2 <- counts_anim %>% 
+  gather(key = team_1, 
+         value = n, -year.x)
+
+
+df_ranked <- df2 %>% 
+  group_by(year.x) %>% 
+  arrange(year.x, -n) %>% 
+  mutate(rank = 1:n()) %>% 
+  filter(rank <= 10)
+
+chart <- ggplot(df_ranked, aes(rank, n))+
+  geom_bar(stat="identity")+
+  coord_flip()+
+  scale_x_reverse()+
+  geom_text(aes(rank, y=0, label=team_1),
+            hjust=0, fontface="bold", size=3)+
+  geom_text(aes(label=sprintf("%1.0f", n)), 
+            hjust=1.1, fontface="bold", size=3)+
+  theme_minimal()+
+    theme(pane.grid=element_blank(),
+          legend.position = "none",
+          plot.margin = margin(1,6,1,6), "cm")
+  
+animation <- chart + 
+    transition_states(year.x, transition_length=2, state_length=0)+
+    view_follow(fixed_x=TRUE)+
+    ease_aes('quadratic-in-out')
+          
+anim_save("test.mp4", animation=animation)
 
 worldMap <- map("world", fill = TRUE, plot = FALSE) 
 
@@ -135,7 +165,7 @@ firstPartNames <- lapply(splitNames, function(x) x[1])
 
 game_types = c("T20", "ODI", "Test")
 
-genderColour <- colorFactor(palette = c( "pink", "steelblue1"), domain=c("female", "male"))
+genderColour <- colorFactor(palette = c("pink", "steelblue1"), domain=c("female", "male"))
 create_games_played_graph = function(team) {
   data_counts_team <- data_counts
   if(team != "World") {
