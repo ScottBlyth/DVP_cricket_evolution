@@ -30,8 +30,21 @@ data_wins_2 = data %>% group_by(match.id, winner,match_type) %>%
 data_wins = rbind(data_wins_1, data_wins_2) %>% group_by(team, year,match_type, gender) %>%
   reframe(wins=sum(wins), games_played=sum(games_played), match_type=match_type)
 
+sum_2 <- function(x,y) {
+  if(is.na(x) && is.na(y)){
+    return(0)
+  }
+  if(is.na(x)){
+    return(y)
+  }
+  if(is.na(y)) {
+    return(x)
+  }
+  return(x+y)
+}
 
 data_counts <- read.csv("games_played.csv")
+#data_counts$n <- to_vec(for(i in 1:nrow(data_counts)) sum_2(data_counts$n.x[i],data_counts$n.y[i]))
 
 data_runs <- data %>% 
   reframe(gender=gender, batting=team.batting,runs=runs, match_type=match_type,year=format(as.Date(start.date, "%Y-%m-%d"), "%Y")) %>% 
@@ -74,49 +87,6 @@ data_runs$batting <- lapply(data_runs$batting, func)
 # reference
 # https://www.youtube.com/watch?v=FOEoKbRUsT8
 
-data_ranked <- data_runs %>% filter(gender=="male", 
-                                    match_type=="T20") %>% 
-                            group_by(batting, year, runsAvg) %>%
-                            reframe(year=as.Date(year, "%Y"))
-
-data_ranked <- data_ranked[order(data_ranked$year),]
-      
-data_ranked <- data_ranked %>%
-            pivot_wider(names_from = batting,
-                        values_from = runsAvg) %>%
-          fill(-year)
-
-
-df2 <- data_ranked %>% 
-        gather(key = batting, 
-               value = runsAvg, -year)
-
-df_ranked <- df2 %>% 
-            group_by(year) %>% 
-            arrange(year, -runsAvg) %>% 
-            mutate(rank = 1:n()) %>% 
-            filter(rank <= 10)
-
-chart <- ggplot(df_ranked, aes(rank, runsAvg)) +
-        geom_bar(stat="identity") +
-        scale_x_reverse()+
-        coord_flip()+
-        scale_x_reverse()+
-        geom_text(aes(rank, y=0, label=batting),
-                  hjust=0, fontface="bold", size=3)+
-        geom_text(aes(label=sprintf("%1.0f", runsAvg)), 
-                  hjust=1.1, fontface="bold", size=3)+
-        geom_text(aes(x=16,y=15, label=format(year, "%Y")), size=25, 
-                  colour="red")
-        theme_minimal()+
-        theme(pane.grid=element_blank(),
-              legend.position = "none",
-              plot.margin = margin(1,6,1,6), "cm")
-animation <- chart + 
-            transition_states(year, transition_length=10, state_length=0)+
-            view_follow(fixed_x=TRUE)+
-            ease_aes('quadratic-in-out')
-
 
 counts_anim <- data_counts %>% 
               group_by(year, team_1) %>% 
@@ -155,11 +125,10 @@ chart <- ggplot(df_ranked, aes(rank, n))+
           plot.margin = margin(1,6,1,6), "cm")
   
 animation <- chart + 
-    transition_states(year, transition_length=10, state_length=0)+
+    transition_states(year, transition_length=10, state_length=1)+
     view_follow(fixed_x=TRUE)+
     ease_aes('quadratic-in-out')
           
-anim_save("test.mp4", animation=animation)
 
 worldMap <- map("world", fill = TRUE, plot = FALSE) 
 
@@ -178,9 +147,9 @@ create_games_played_graph = function(team) {
   data_counts_team$colour <- lapply(data_counts_team$gender, genderColour)
   data_counts_team <- data_counts_team[order(data_counts_team$gender),]
   gender_pallete = sapply(unique(data_counts_team$gender), genderColour)
-  p <- ggplot(data_counts_team, aes(x=as.numeric(year.x),y=n,fill=colour))+geom_col()+
+  p <- ggplot(data_counts_team, aes(x=as.numeric(year),y=n,fill=colour))+geom_col()+
     labs(title=team, x="Year",  y="Matches Played",colour="Match Type", fill="Gender")+expand_limits(y=0)+
-    scale_colour_identity()+facet_wrap(vars(match_type.x))
+    scale_colour_identity()+facet_wrap(vars(match_type))
   return(p)
 }
 
@@ -197,7 +166,7 @@ create_avg_runs_graph = function(team) {
 
 
 
-d <- data_counts %>% group_by(team_1, year.x) %>% summarise(n=sum(n))
+d <- data_counts %>% group_by(team_1, year) %>% summarise(n=sum(n,na.rm=TRUE))
 cpal = colorNumeric("RdBu",d$n, reverse=TRUE)
 cpal_wins = colorNumeric("RdBu", data_wins$wins/data_wins$games_played, reverse=TRUE)
 
@@ -218,8 +187,8 @@ shinyServer(function(input, output) {
   
   
   test <- reactive(filter(data_counts, 
-                          year.x == format(input$year, "%Y"), gender %in% gender_list(), 
-                          match_type.x %in% game_forms()) %>% 
+                          year == format(input$year, "%Y"), gender %in% gender_list(), 
+                          match_type %in% game_forms()) %>% 
                           group_by(team_1) %>% summarise(n=sum(n))) 
 
   games_played <- reactive(test()$n[match(firstPartNames, test()$team_1)])
