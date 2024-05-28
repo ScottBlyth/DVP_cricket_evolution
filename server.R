@@ -118,10 +118,10 @@ chart <- ggplot(df_ranked, aes(rank, n))+
   scale_x_reverse()+
   labs(y="Matches Played Across all Cricket")+
   geom_text(aes(rank, y=0, label=team_1),
-            hjust=0,colour="black",family="sans", fontface="bold", size=8)+
+            hjust=0,colour="black",family="sans", fontface="bold", size=3)+
   geom_text(aes(label=sprintf("%1.0f", n)), 
             hjust=1.1, fontface="bold", size=3)+
-  geom_text(aes(label=sprintf("%1.0f", year),x=16, y=15), fontface="bold", size=5)+
+  geom_label(aes(label=sprintf("%1.0f", year),x=16, y=500),size=25, fontface="bold")+
   theme_minimal()+
     theme(pane.grid=element_blank(),
           axis.title.y=element_blank(),

@@ -10,7 +10,7 @@ dashboardPage(
   tags$head(
     tags$style(
       ".title {color: green; font-size: 40px;}", 
-      ".subtitle {color: black; font-size: 20px;}",
+      ".subtitle {color: black; font-size: 20px; align: center;}",
       ".info {color: black; font-size: 16px}",
       ".legend {color: blue; font-size: 16px;}"
     )
@@ -29,7 +29,7 @@ dashboardPage(
     textInput("country", "Country", value="World")
     ,width=2),
     mainPanel(
-      h1("What Countries Play Cricket?", class="subtitle"),
+      h1("What Countries Play Cricket?", class="subtitle", align="center"),
       splitLayout(leafletOutput("gamesMap",width = "100%", height = 300),
                   plotOutput("country_plot", height="200px", width="100%")
           ), 
@@ -41,6 +41,7 @@ dashboardPage(
                            two decades. However, they mostly participtate in T20/ODI, with very few games played in the Test cricket format relative to men")),
         )
       ),
+  h1("What Countries have Played Cricket the Most?",class="subtitle",align="center"),
   img(src="matches_played_race.gif",align="center", height='850px', width='1400px'),
   
   h1("Batting Performance: Average Runs of Each Country by Year", class="subtitle"),
