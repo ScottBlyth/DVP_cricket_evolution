@@ -175,9 +175,7 @@ create_avg_runs_graph = function(team) {
 create_win_rate_graph <- function(team_1) {
   d_wins <- data_wins %>% filter(team==team_1) 
   d_wins$colour <- lapply(d_wins$gender, genderColour)
-  d_wins <- d_wins[order(d_wins$gender),]
-  gender_pallete = sapply(unique(d_wins$gender), genderColour)
-  p <- ggplot(d_wins, aes(x=as.numeric(year), y=wins/games_played, fill=colour, colour=colour))+
+  p <- ggplot(d_wins, aes(x=as.numeric(year), y=wins/games_played, fill=colour, color=colour))+
         scale_colour_identity()+
         geom_smooth()+labs(title=team_1, x="Year", y="Win Rate")
   return(p)
