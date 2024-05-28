@@ -62,7 +62,13 @@ dashboardPage(
   h1(span("Performance:", class="blueTitle"), "Average Runs of Each Country by Year", class="subsection"),
   sidebarLayout(
     sidebarPanel(
-      sliderInput("runsYear", "Year", as.Date("2003", "%Y"),as.Date("2023", "%Y"), as.Date("1", "%Y"), round=TRUE, timeFormat="%Y")
+      sliderInput("runsYear", "Year", as.Date("2003", "%Y"),as.Date("2023", "%Y"), as.Date("1", "%Y"), round=TRUE, timeFormat="%Y"),
+      checkboxInput("T20performance", "T20", value=TRUE),
+      checkboxInput("ODIperformance", "ODI", value=TRUE),
+      checkboxInput("Testperformance", "Test", value=TRUE),
+      checkboxInput("malePerformance", "Male", value=TRUE),
+      checkboxInput("femalePerformance", "Female", value=TRUE),
+      textInput("countryPerformance", "Country", value="World")
     ,width=2),
     mainPanel(
       splitLayout(

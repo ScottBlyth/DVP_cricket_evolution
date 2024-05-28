@@ -82,6 +82,7 @@ func <- function(x) {
 
 data_wins$team = lapply(data_wins$team, func)
 
+
 data_counts$team_1 <- lapply(data_counts$team_1, func)
 data_runs$batting <- lapply(data_runs$batting, func)
 
@@ -146,38 +147,67 @@ firstPartNames <- lapply(splitNames, function(x) x[1])
 
 game_types = c("T20", "ODI", "Test")
 
+
+
+# games played Plot
+####################
 genderColour <- colorFactor(palette = c("pink", "steelblue1"), domain=c("female", "male"))
 create_games_played_graph = function(team) {
   data_counts_team <- data_counts
   if(team != "World") {
     data_counts_team <- data_counts %>% filter(team_1==team)
   }
+  if(nrow(data_counts_team)==0) {
+    p <- ggplot()+geom_text(aes(x=0,y=0, label=paste('"',team, '" country not found')), size=10, 
+                            colour="red", fontface="bold")
+    return(p)
+  }
   data_counts_team$colour <- lapply(data_counts_team$gender, genderColour)
   data_counts_team <- data_counts_team[order(data_counts_team$gender),]
   gender_pallete = sapply(unique(data_counts_team$gender), genderColour)
   p <- ggplot(data_counts_team, aes(x=as.numeric(year),y=n,fill=colour))+geom_col()+
     labs(title=team, x="Year",  y="Matches Played",colour="Match Type", fill="Gender")+expand_limits(y=0)+
-    scale_colour_identity()+facet_wrap(vars(match_type), dir="v")
+    scale_colour_identity()+facet_wrap(vars(match_type), dir="v")+ 
+        theme(text=element_text(size=20), axis.text.x=element_text(size=10, angle=45))+
+    scale_x_continuous(breaks=2002:2023)
   return(p)
 }
 
+# Average Runs Plot 
+#####################
 create_avg_runs_graph = function(team) {
   d_team <- data_runs
   if(team != "World") {
     d_team <- d_team %>% filter(batting==team)
   }
-  
+  if(nrow(d_team)==0) {
+    p <- ggplot()+geom_text(aes(x=0,y=0, label=paste('"',team, '" country not found')), size=10, 
+                            colour="red", fontface="bold")
+    return(p)
+  }
   p <- ggplot(d_team, aes(x=as.numeric(year),y=runsAvg,colour=match_type))+geom_smooth()+
-    labs(title=team, x="Year",  y="Average Runs",colour="Match Type")+expand_limits(y=0)
+    labs(title=team, x="Year",  y="Average Runs",colour="Match Type")+expand_limits(y=0)+
+    theme(text=element_text(size=20))
   return(p)
 }
 
+# Win Rate plot 
+#################
 create_win_rate_graph <- function(team_1) {
   d_wins <- data_wins %>% filter(team==team_1) 
+  if(nrow(d_wins)==0) {
+    p <- ggplot()+geom_text(aes(x=0,y=0, label=paste('"',team_1, '" country not found')), size=10, 
+                            colour="red", fontface="bold")
+    return(p)
+  }
   d_wins$colour <- lapply(d_wins$gender, genderColour)
-  p <- ggplot(d_wins, aes(x=as.numeric(year), y=wins/games_played, fill=colour, color=colour))+
+  p <- ggplot(d_wins, aes(x=as.numeric(year), y=wins/games_played, group=gender, fill=colour, color=colour))+
         scale_colour_identity()+
-        geom_smooth()+labs(title=team_1, x="Year", y="Win Rate")
+        geom_smooth()+labs(title=team_1, x="Year", y="Win Rate")+
+        geom_hline(yintercept=0.5, colour="black")+
+        scale_y_continuous(limits=c(0,1))+
+        facet_wrap(~match_type)+
+        theme(text=element_text(size=20))
   return(p)
 }
 
@@ -196,9 +226,16 @@ shinyServer(function(input, output) {
   
   form_bools = reactive(c(input$T20, input$ODI, input$Test))
   game_forms = reactive(to_vec(for(i in 1:3) if(form_bools()[i]) game_types[i]))
+  
+  form_bools_perform <- reactive(c(input$T20performance, input$ODIperformance, input$Testperformance))
+  game_forms_perform = reactive(to_vec(for(i in 1:3) if(form_bools_perform()[i]) game_types[i]))
+  
   genders = c("male", "female")
   gender_bools = reactive(c(input$male, input$female))
   gender_list = reactive(to_vec(for(i in 1:2) if (gender_bools()[i]) genders[i]))
+  
+  gender_bools_perform <- reactive(c(input$malePerformance, input$femalePerformance))
+  gender_list_perform <- reactive(to_vec(for(i in 1:2) if (gender_bools_perform()[i]) genders[i]))
   
   
   test <- reactive(filter(data_counts, 
@@ -221,7 +258,8 @@ shinyServer(function(input, output) {
                                      ) %>% addLegend(pal=cpal, values=d$n, title="Matches Played"))
   
    wins <- reactive(filter(data_wins, year==format(input$runsYear, "%Y"), 
-                    match_type %in% game_forms(), gender %in% gender_list()) %>% group_by(team) %>% reframe(n=wins/games_played))
+                    match_type %in% game_forms_perform(), gender %in% gender_list_perform()) 
+                    %>% group_by(team) %>% reframe(n=wins/games_played))
    
    # SECOND map/plot
    
@@ -233,11 +271,11 @@ shinyServer(function(input, output) {
                                      smoothFactor = 0.2, 
                                      fillOpacity = 1,
                                      color = cpal_wins(wins_list()), 
-                                     popup="hello"
+                                     popup=wins()$team[match(firstPartNames, wins()$team)]
                                    ) %>% addLegend(pal=cpal_wins, values=data_wins$wins/data_wins$games_played, title="Win Rate") )
    p2 <- reactive(create_avg_runs_graph(input$country)) 
    output$runsGraph <- renderPlot(p2())
-   p3 <- reactive(create_win_rate_graph(input$country)) # change input country 
+   p3 <- reactive(create_win_rate_graph(input$countryPerformance)) # change input country 
    output$winrateGraph <- renderPlot(p3())
 })
 
