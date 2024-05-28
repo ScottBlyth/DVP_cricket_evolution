@@ -29,7 +29,8 @@ data_wins_2 = data %>% group_by(match.id, winner,match_type) %>%
 
 
 data_wins = rbind(data_wins_1, data_wins_2) %>% group_by(team, year,match_type, gender) %>%
-  reframe(wins=sum(wins), games_played=sum(games_played), match_type=match_type)
+  reframe(wins=sum(wins), games_played=sum(games_played), match_type=match_type) %>% 
+  group_by(team, year,match_type, gender, wins,games_played) %>% tally()
 
 sum_2 <- function(x,y) {
   if(is.na(x) && is.na(y)){
@@ -156,7 +157,7 @@ create_games_played_graph = function(team) {
   gender_pallete = sapply(unique(data_counts_team$gender), genderColour)
   p <- ggplot(data_counts_team, aes(x=as.numeric(year),y=n,fill=colour))+geom_col()+
     labs(title=team, x="Year",  y="Matches Played",colour="Match Type", fill="Gender")+expand_limits(y=0)+
-    scale_colour_identity()+facet_wrap(vars(match_type))
+    scale_colour_identity()+facet_wrap(vars(match_type), dir="v")
   return(p)
 }
 
@@ -171,7 +172,16 @@ create_avg_runs_graph = function(team) {
   return(p)
 }
 
-
+create_win_rate_graph <- function(team_1) {
+  d_wins <- data_wins %>% filter(team==team_1) 
+  d_wins$colour <- lapply(d_wins$gender, genderColour)
+  d_wins <- d_wins[order(d_wins$gender),]
+  gender_pallete = sapply(unique(d_wins$gender), genderColour)
+  p <- ggplot(d_wins, aes(x=as.numeric(year), y=wins/games_played, fill=colour, colour=colour))+
+        scale_colour_identity()+
+        geom_smooth()+labs(title=team_1, x="Year", y="Win Rate")
+  return(p)
+}
 
 d <- data_counts %>% group_by(team_1, year) %>% summarise(n=sum(n,na.rm=TRUE))
 cpal = colorNumeric("RdBu",d$n, reverse=TRUE)
@@ -215,7 +225,7 @@ shinyServer(function(input, output) {
    wins <- reactive(filter(data_wins, year==format(input$runsYear, "%Y"), 
                     match_type %in% game_forms(), gender %in% gender_list()) %>% group_by(team) %>% reframe(n=wins/games_played))
    
-   # SECOND plot
+   # SECOND map/plot
    
    wins_list <- reactive(wins()$n[match(firstPartNames, wins()$team)])
    output$runsMap <- renderLeaflet(leaflet(worldMap) %>% 
@@ -229,6 +239,8 @@ shinyServer(function(input, output) {
                                    ) %>% addLegend(pal=cpal_wins, values=data_wins$wins/data_wins$games_played, title="Win Rate") )
    p2 <- reactive(create_avg_runs_graph(input$country)) 
    output$runsGraph <- renderPlot(p2())
+   p3 <- reactive(create_win_rate_graph(input$country)) # change input country 
+   output$winrateGraph <- renderPlot(p3())
 })
 
 
