@@ -9,10 +9,10 @@ dashboardPage(
   dashboardBody(fluidPage(
   tags$head(
     tags$style(
-      ".title {color: green; font-size: 40px;}", 
-      ".subtitle {color: black; font-size: 20px; align: center;}",
-      ".info {color: black; font-size: 16px}",
-      ".legend {color: blue; font-size: 16px;}"
+      ".title {color: green; font-size: 40px; font-family: Figaro; font-weight: bold}", 
+      ".subtitle {color: black; font-size: 20px; align: center; font-weight: bold}",
+      ".info {color: black; font-size: 16px; font-family: Arial;}",
+      ".legend {color: blue; font-size: 16px; font-family: Arial;}"
     )
   ),
   # Application title
@@ -42,7 +42,7 @@ dashboardPage(
         )
       ),
   h1("What Countries have Played Cricket the Most?",class="subtitle",align="center"),
-  img(src="matches_played_race.gif",align="center", height='850px', width='1400px'),
+  HTML('<center><img src="matches_played_race.gif", height="850px", width="1400px"></center>'),
   
   h1("Batting Performance: Average Runs of Each Country by Year", class="subtitle"),
   
