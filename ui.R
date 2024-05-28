@@ -16,14 +16,18 @@ dashboardPage(
       ".pinfo {color: black; font-size: 16px; font-family: Arial; width=500px;}",
       ".legend {color: blue; font-size: 16px; font-family: Arial; width=500px;}",
       ".legend_male {color: steelblue; font-size: 16px; font-family: Arial; width=300px}",
-      ".legend_female {color: pink; font-size: 16px; font-family: Arial; width=300px;}"
+      ".legend_female {color: pink; font-size: 16px; font-family: Helvetica; font-weight: bold, width=300px;}"
     )
   ),
   # Application title
   headerPanel(h1("Evolution: How has Cricket Changed?", class="title", align="center")),
   
   # Introduction 
-  
+  h1(span(class="blueTitle","Introduction:"), "What is Cricket and What has Changed?", class="subsection"),
+  p("This visualisation explores how cricket has changed in three areas: Participation, Relative Performance and Country Connectivity.
+    The Participation section, will explore which countries play the most cricket, and how this has changed overtime. Furthermore, 
+      the increased participation of all countries around the globe will be shown, and especially the increasing participation of Women in 
+      cricket.", class='pinfo'),
   # First Plot
   h1(span(class="blueTitle","Participation:"), " How much Cricket is Played?", class="subsection"),
   h1("Which Countries have Played Cricket the Most? (2003 to 2023)",class="subtitle",align="center"),
@@ -55,7 +59,7 @@ dashboardPage(
           p("Some interesting trends to look out for: rise of T20 cricket! The T20 format was created in", 
           a("2003", href="https://en.wikipedia.org/wiki/Twenty20"), "and has since seen a rise with more and more countries competing.
           Women's cricket too, has seen a dramatic increase over the last two decades. 
-            However, they mostly participtate in T20/ODI, with very few games played in the Test cricket format relative to men, as seen in the graph to the right.")),
+            However, they mostly participate in T20/ODI, with very few games played in the Test cricket format relative to men, as seen in the graph to the right.")),
         ,width=10),
       ),
   
@@ -79,4 +83,4 @@ dashboardPage(
     ,width=10)
   ),
 )
-))
+), title="Evolution: How has Cricket Changed?", skin="black")
