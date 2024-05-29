@@ -16,24 +16,32 @@ dashboardPage(
       ".pinfo {color: black; font-size: 16px; font-family: Arial; width=500px;}",
       ".legend {color: blue; font-size: 16px; font-family: Arial; width=500px;}",
       ".legend_male {color: steelblue; font-size: 16px; font-family: Arial; width=300px}",
-      ".legend_female {color: pink; font-size: 16px; font-family: Helvetica; font-weight: bold, width=300px;}"
+      ".legend_female {color: pink; font-size: 16px; font-family: Helvetica; font-weight: bold, width=300px;}", 
+      ".yearRange {color: black; font-weight: bold}"
     )
   ),
   # Application title
   headerPanel(h1("Evolution: How has Cricket Changed?", class="title", align="center")),
   
   # Introduction 
-  h1(span(class="blueTitle","Introduction:"), "What is Cricket and What has Changed?", class="subsection"),
+  h1(span(class="blueTitle","Introduction:"), "What is the Purpose of this Visulualisation?", class="subsection"),
+  p("This data visulisation is used to study trends between", span("2003 to 2023", class="yearRange"), 
+      "in cricket. The dataset used includes information from each game in international cricket (T20/ODI/Test).", class="pinfo"),
   p("This visualisation explores how cricket has changed in three areas: Participation, Relative Performance and Country Connectivity.
     The Participation section, will explore which countries play the most cricket, and how this has changed overtime. Furthermore, 
       the increased participation of all countries around the globe will be shown, and especially the increasing participation of Women in 
-      cricket.", class='pinfo'),
+      cricket. This visualisation also seeks so show the rise of T20 cricket, and how it relates to increased global participation in cricket.", class='pinfo'),
+  p("Secondly, the win rates of each country, and how it has changed overtime will be shown, in order to show how different countries 
+    perform against one another. The goal is to see if trends such as which teams dominate the sport over a particular time period can be seen.", class="pinfo"),
+  p("Lastly, the connectivity of the competition is explored. For example, consider that India, Australia and England tend to play against one another at a higher 
+    rate than against the United States for instance That is, this visulusation dashboard seeks to see trends in this type of clustering to better understand 
+    how diverse the competition pool is.", class="pinfo"),
   # First Plot
   h1(span(class="blueTitle","Participation:"), " How much Cricket is Played?", class="subsection"),
   h1("Which Countries have Played Cricket the Most? (2003 to 2023)",class="subtitle",align="center"),
   
   HTML('<center><img src="matches_played_race.gif", height="850px", width="1400px"></center>'),
-  
+  p("", class="pinfo"),
   
   sidebarLayout(sidebarPanel(
     sliderInput("year", "Year", as.Date("2003", "%Y"),as.Date("2023", "%Y"), as.Date("1", "%Y"), round=TRUE, timeFormat="%Y"),
@@ -49,9 +57,11 @@ dashboardPage(
       splitLayout(leafletOutput("gamesMap",width = "100%", height = 600),
                   div(plotOutput("country_plot", height="500px", width="100%"), 
                       p(class="pinfo",
-                        "The ", span("Blue", class="legend_male"), " areas show matches played in Male Cricket"),
+                        "The ", span("Blue", class="legend_male"), " areas show matches played in", 
+                        span("Male",class="legend_male"), "Cricket"),
                       p(class="pinfo",
-                          "The ", span("Pink", class="legend_female"), " areas show matches played in Female Cricket"))
+                          "The ", span("Pink", class="legend_female"), " areas show matches played in", 
+                        span("Female", class="legend_female"), "Cricket"))
           ), 
         tags$text("Click on a Country for more information! Also use the year slider on the left to see the number of T20/ODI/Test matches each country has played on the map. 
                   You can also filter by match type (T20/ODI/Test).", class="legend"),
@@ -63,7 +73,7 @@ dashboardPage(
         ,width=10),
       ),
   
-  h1(span("Performance:", class="blueTitle"), "Average Runs of Each Country by Year", class="subsection"),
+  h1(span("Performance:", class="blueTitle"), "Win Rates of Each Country per Year", class="subsection"),
   sidebarLayout(
     sidebarPanel(
       sliderInput("runsYear", "Year", as.Date("2003", "%Y"),as.Date("2023", "%Y"), as.Date("1", "%Y"), round=TRUE, timeFormat="%Y"),

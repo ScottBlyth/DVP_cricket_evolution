@@ -76,6 +76,9 @@ func <- function(x) {
   if(x == "England") {
     return("UK")
   }
+  if(x == "United States of America") {
+    return("USA")
+  }
   return(x)
   
 }
@@ -212,7 +215,7 @@ create_win_rate_graph <- function(team_1) {
 }
 
 d <- data_counts %>% group_by(team_1, year) %>% summarise(n=sum(n,na.rm=TRUE))
-cpal = colorNumeric("RdBu",d$n, reverse=TRUE)
+cpal = colorNumeric("Blues",d$n, reverse=TRUE)
 cpal_wins = colorNumeric("RdBu", data_wins$wins/data_wins$games_played, reverse=TRUE)
 
 
