@@ -48,7 +48,7 @@ dashboardPage(
     India had played 1026 compared to 204 by Netherlands. This is due to the only recent mass adoption of cricket globally
     beyond those 10 main cricket playing countries. Furthermore, they play all three forms of cricket, whereas most teams 
     only play T20 and ODI. Another observation is how quickly the top 10 order is determined, where no country
-    initially below the top 10 ever 'break' into it. However, in recent years, Ireland is catching up to Zimbabwe, suggesting 
+    initially below the top 10 ever 'break' into it. It s However, in recent years, Ireland is catching up to Zimbabwe, suggesting 
     that the 10 countries that make up the core of cricket, may change due to the recent mass adoption of cricket. ", class="pinfo"),
   sidebarLayout(sidebarPanel(
     sliderInput("year", "Year", as.Date("2003", "%Y"),as.Date("2023", "%Y"), as.Date("1", "%Y"), round=TRUE, timeFormat="%Y"),
@@ -74,9 +74,13 @@ dashboardPage(
                   You can also filter by match type (T20/ODI/Test).", class="legend"),
         div(class="pinfo",
           p("Some interesting trends to look out for: rise of T20 cricket! The T20 format was created in", 
-          a("2003", href="https://en.wikipedia.org/wiki/Twenty20"), "and has since seen a rise with more and more countries competing.
+          a("2003", href="https://en.wikipedia.org/wiki/Twenty20"), "and has since seen a rise with more and more countries competing. 
           Women's cricket too, has seen a dramatic increase over the last two decades. 
-            However, they mostly participate in T20/ODI, with very few games played in the Test cricket format relative to men, as seen in the graph to the right.")),
+            However, they mostly participate in T20/ODI, with very few games played in the Test cricket format relative to men, as seen in the graph to the right.
+          Recall the quick jump of United Arab Emirates in the bar chart race - have a look at the UAE plot for matches played. See the increasing trend is mostly with in T20. 
+          These observations show that T20 cricket has likely helped in the global participation of cricket. In fact, the T20 
+          format of the game will be played in the", a(href="https://www.cricket.com.au/news/3738922/cricket-confirmed-for-2028-la-olympics", 
+                                                       "2028 Olympics."))),
         ,width=10),
       ),
   
