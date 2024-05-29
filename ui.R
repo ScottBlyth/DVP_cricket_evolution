@@ -25,7 +25,7 @@ dashboardPage(
   
   # Introduction 
   h1(span(class="blueTitle","Introduction:"), "What is the Purpose of this Visulualisation?", class="subsection"),
-  p("This data visulisation is used to study trends between", span("2003 to 2023", class="yearRange"), 
+  p("This data visulisation is used to study trends between", span("2002 to 2023", class="yearRange"), 
       "in cricket. The dataset used includes information from each game in international cricket (T20/ODI/Test).", class="pinfo"),
   p("This visualisation explores how cricket has changed in three areas: Participation, Relative Performance and Country Connectivity.
     The Participation section, will explore which countries play the most cricket, and how this has changed overtime. Furthermore, 
@@ -38,11 +38,18 @@ dashboardPage(
     how diverse the competition pool is.", class="pinfo"),
   # First Plot
   h1(span(class="blueTitle","Participation:"), " How much Cricket is Played?", class="subsection"),
-  h1("Which Countries have Played Cricket the Most? (2003 to 2023)",class="subtitle",align="center"),
+  h1("Which Countries have Played Cricket the Most? (2002 to 2023)",class="subtitle",align="center"),
   
   HTML('<center><img src="matches_played_race.gif", height="850px", width="1400px"></center>'),
-  p("", class="pinfo"),
-  
+  p("This bar chart race shows the number of matches played across all forms of cricket (T20/ODI/Test) by each 
+    country over the last 21 years (2002 to 2023).", class="legend"),
+  p("A simple, inital observation is the top countries, Australia, India, England, South Africa etc. play 
+    the significantely more matches then other countries. Specifically, by the end of 2023, 
+    India had played 1026 compared to 204 by Netherlands. This is due to the only recent mass adoption of cricket globally
+    beyond those 10 main cricket playing countries. Furthermore, they play all three forms of cricket, whereas most teams 
+    only play T20 and ODI. Another observation is how quickly the top 10 order is determined, where no country
+    initially below the top 10 ever 'break' into it. However, in recent years, Ireland is catching up to Zimbabwe, suggesting 
+    that the 10 countries that make up the core of cricket, may change due to the recent mass adoption of cricket. ", class="pinfo"),
   sidebarLayout(sidebarPanel(
     sliderInput("year", "Year", as.Date("2003", "%Y"),as.Date("2023", "%Y"), as.Date("1", "%Y"), round=TRUE, timeFormat="%Y"),
     checkboxInput("T20", "T20", value=TRUE),
