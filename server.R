@@ -11,7 +11,6 @@ library(leafpop)
 library(ggplot2)
 library(gganimate)
 library(extrafont)
-loadfonts(device = "win")
 
 
 data <- read.csv("cricsheet_data.csv")

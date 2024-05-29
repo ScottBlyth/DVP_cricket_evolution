@@ -10,13 +10,13 @@ dashboardPage(
   tags$head(
     tags$style(
       ".blueTitle {color: blue; font-weight: bold;}",
-      ".title {color: green; font-size: 50px; font-family: Trebuchet MS; font-weight: bold}", 
+      ".title {color: green; font-size: 50px; font-family: Georgia; font-weight: bold}", 
       ".subsection {color: black; font-size: 30px; align: center;}",
       ".subtitle {color: black; font-size: 20px; align: center; font-weight: bold}",
       ".pinfo {color: black; font-size: 16px; font-family: Arial; width=500px;}",
       ".legend {color: blue; font-size: 16px; font-family: Arial; width=500px;}",
       ".legend_male {color: steelblue; font-size: 16px; font-family: Arial; width=300px}",
-      ".legend_female {color: pink; font-size: 16px; font-family: Helvetica; font-weight: bold, width=300px;}", 
+      ".legend_female {color: pink; font-size: 16px; font-family: Arial; font-weight: bold, width=300px;}", 
       ".yearRange {color: black; font-weight: bold}"
     )
   ),
