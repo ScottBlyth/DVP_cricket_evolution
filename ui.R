@@ -51,7 +51,7 @@ dashboardPage(
     initially below the top 10 ever 'break' into it. It s However, in recent years, Ireland is catching up to Zimbabwe, suggesting 
     that the 10 countries that make up the core of cricket, may change due to the recent mass adoption of cricket. ", class="pinfo"),
   sidebarLayout(sidebarPanel(
-    sliderInput("year", "Year", as.Date("2003", "%Y"),as.Date("2023", "%Y"), as.Date("1", "%Y"), round=TRUE, timeFormat="%Y"),
+    sliderInput("year", "Year", as.Date("2002", "%Y"),as.Date("2023", "%Y"), as.Date("1", "%Y"), round=TRUE, timeFormat="%Y"),
     checkboxInput("T20", "T20", value=TRUE),
     checkboxInput("ODI", "ODI", value=TRUE),
     checkboxInput("Test", "Test", value=TRUE),
@@ -84,10 +84,11 @@ dashboardPage(
         ,width=10),
       ),
   
-  h1(span("Performance:", class="blueTitle"), "Win Rates of Each Country per Year", class="subsection"),
+  h1(span("Performance:", class="blueTitle"), "How do Countries Compare?", class="subsection"),
+  p("Win Rates by Country and Relative Performance",class="subtitle", align="center"),
   sidebarLayout(
     sidebarPanel(
-      sliderInput("runsYear", "Year", as.Date("2003", "%Y"),as.Date("2023", "%Y"), as.Date("1", "%Y"), round=TRUE, timeFormat="%Y"),
+      sliderInput("runsYear", "Year", as.Date("2002", "%Y"),as.Date("2023", "%Y"), c(as.Date("2002", "%Y"), as.Date("2023", "%Y")), round=TRUE, timeFormat="%Y"),
       checkboxInput("T20performance", "T20", value=TRUE),
       checkboxInput("ODIperformance", "ODI", value=TRUE),
       checkboxInput("Testperformance", "Test", value=TRUE),
@@ -99,8 +100,18 @@ dashboardPage(
       splitLayout(
         leafletOutput("runsMap", width = "100%", height = 600),
         div(plotOutput("runsGraph", height="200px", width="100%"),
-        plotOutput("winrateGraph", height="200px", width="100%"))
-      )
+        plotOutput("winrateGraph", height="400px", width="100%"))
+      ),
+      p("The year slider has two ends, where the maps shows the win rates between those two years. You can either 
+        change end at once, by dragging the circle. Or you can slider both ends, by dragging from the blue line between the two 
+        ends.",class="legend"),
+      p("When using this graph, it should be noted that a teams high perfrormance (or low) has of course been effected by 
+        what teams they compete against. This can bee seen with the large variability when moving year slider 
+        year by year. However, as you extend this both ends of the slider across the a larger area, some trends do emerge: the more recent 
+        teams (China, Turkey, South Korea etc.) perform worse (try setting year slider to 2019 to 2023). For specific trends, have a look at Australia 
+        at 5 year intervals (2002 to 2007, 2008 to 2013, 2014 to 2019, 2020 to 2023) for Test male cricket. Notice the initial"
+        , a(href="https://en.wikipedia.org/wiki/Australia_national_cricket_team", "golden era"), "followed by a cold spell and now a general 
+        increase in performance. Be sure to search for specific countries to see their win rate and average runs plot.",class="pinfo")
     ,width=10)
   ),
 )

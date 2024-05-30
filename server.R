@@ -7,10 +7,8 @@ library(sf)
 library(maps)
 library(RColorBrewer)
 library(comprehenr)
-library(leafpop)
 library(ggplot2)
 library(gganimate)
-library(extrafont)
 
 
 data <- read.csv("cricsheet_data.csv")
@@ -131,6 +129,7 @@ chart <- ggplot(df_ranked, aes(rank, n))+
           axis.title.y=element_blank(),
           axis.text.y=element_blank(),
           axis.ticks.y=element_blank(),
+          axis.text = element_text(size=10),
           legend.position = "none",
           plot.margin = margin(1,6,1,6), "cm")
   
@@ -208,7 +207,7 @@ create_win_rate_graph <- function(team_1) {
         geom_smooth()+labs(title=team_1, x="Year", y="Win Rate")+
         geom_hline(yintercept=0.5, colour="black")+
         scale_y_continuous(limits=c(0,1))+
-        facet_wrap(~match_type)+
+        facet_wrap(~gender+~match_type)+
         theme(text=element_text(size=20))
   return(p)
 }
@@ -259,9 +258,10 @@ shinyServer(function(input, output) {
                                           "\nn: ", test()$n[match(firstPartNames, test()$team_1)])
                                      ) %>% addLegend(pal=cpal, values=d$n, title="Matches Played"))
   
-   wins <- reactive(filter(data_wins, year==format(input$runsYear, "%Y"), 
+   wins <- reactive(filter(data_wins, as.numeric(year)>=as.numeric(format(input$runsYear[1], "%Y")),
+                           as.numeric(year)<=as.numeric(format(input$runsYear[2], "%Y")), 
                     match_type %in% game_forms_perform(), gender %in% gender_list_perform()) 
-                    %>% group_by(team) %>% reframe(n=wins/games_played))
+                    %>% group_by(team) %>% reframe(n=sum(wins)/sum(games_played)))
    
    # SECOND map/plot
    
@@ -275,7 +275,7 @@ shinyServer(function(input, output) {
                                      color = cpal_wins(wins_list()), 
                                      popup=wins()$team[match(firstPartNames, wins()$team)]
                                    ) %>% addLegend(pal=cpal_wins, values=data_wins$wins/data_wins$games_played, title="Win Rate") )
-   p2 <- reactive(create_avg_runs_graph(input$country)) 
+   p2 <- reactive(create_avg_runs_graph(input$countryPerformance)) 
    output$runsGraph <- renderPlot(p2())
    p3 <- reactive(create_win_rate_graph(input$countryPerformance)) # change input country 
    output$winrateGraph <- renderPlot(p3())
