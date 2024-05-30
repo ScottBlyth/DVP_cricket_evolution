@@ -5,7 +5,7 @@ library(leaflet)
 # Define UI for miles per gallon application
 dashboardPage( 
   dashboardHeader(), 
-  dashboardSidebar(), 
+  dashboardSidebar(collapsed=TRUE), 
   dashboardBody(fluidPage(
   tags$head(
     tags$style(
