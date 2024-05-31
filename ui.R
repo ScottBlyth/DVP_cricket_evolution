@@ -16,8 +16,9 @@ dashboardPage(
       ".pinfo {color: black; font-size: 16px; font-family: Arial; width=500px;}",
       ".legend {color: blue; font-size: 16px; font-family: Arial; width=500px;}",
       ".legend_male {color: steelblue; font-size: 16px; font-family: Arial; width=300px}",
-      ".legend_female {color: pink; font-size: 16px; font-family: Arial; font-weight: bold, width=300px;}", 
-      ".yearRange {color: black; font-weight: bold}"
+      ".legend_female {color: pink; font-size: 16px; font-family: Arial; font-weight: bold, width=300px;}",
+      ".yearRange {color: black; font-weight: bold}", 
+      ".conclusion {color: black; font-weight: bold; font-family: Geogia; font-size: 30px}"
     )
   ),
   # Application title
@@ -33,9 +34,6 @@ dashboardPage(
       cricket. This visualisation also seeks so show the rise of T20 cricket, and how it relates to increased global participation in cricket.", class='pinfo'),
   p("Secondly, the win rates of each country, and how it has changed overtime will be shown, in order to show how different countries 
     perform against one another. The goal is to see if trends such as which teams dominate the sport over a particular time period can be seen.", class="pinfo"),
-  p("Lastly, the connectivity of the competition is explored. For example, consider that India, Australia and England tend to play against one another at a higher 
-    rate than against the United States for instance That is, this visulusation dashboard seeks to see trends in this type of clustering to better understand 
-    how diverse the competition pool is.", class="pinfo"),
   # First Plot
   h1(span(class="blueTitle","Participation:"), " How much Cricket is Played?", class="subsection"),
   h1("Which Countries have Played Cricket the Most? (2002 to 2023)",class="subtitle",align="center"),
@@ -100,7 +98,7 @@ dashboardPage(
       splitLayout(
         leafletOutput("runsMap", width = "100%", height = 600),
         div(plotOutput("runsGraph", height="200px", width="100%"),
-        plotOutput("winrateGraph", height="400px", width="100%"))
+        plotOutput("winrateGraph", height="400px", width="100%")),
       ),
       p("The year slider has two ends, where the maps shows the win rates between those two years. You can either 
         change end at once, by dragging the circle. Or you can slider both ends, by dragging from the blue line between the two 
@@ -111,8 +109,16 @@ dashboardPage(
         teams (China, Turkey, South Korea etc.) perform worse (try setting year slider to 2019 to 2023). For specific trends, have a look at Australia 
         at 5 year intervals (2002 to 2007, 2008 to 2013, 2014 to 2019, 2020 to 2023) for Test male cricket. Notice the initial"
         , a(href="https://en.wikipedia.org/wiki/Australia_national_cricket_team", "golden era"), "followed by a cold spell and now a general 
-        increase in performance. Be sure to search for specific countries to see their win rate and average runs plot.",class="pinfo")
+        increase in performance. Intestingly, when looking at the average 
+        runs for T20/ODI/Test, it appears to be unchanging overtime, evene for the newer T20 sport.\n For specific country 
+        observations, be sure to search for specific countries to see their win rate and average runs plot.",class="pinfo")
     ,width=10)
   ),
+  
+  h1("Conclusion", class="conclusion", align="center"),
+  p("The introduction of T20 cricket has resulted in a signifcant increase in global participation in cricket. However, 
+    this increase is not seen across all forms of the game, namely ODI and Test cricket. Furthermore, women's cricket has also increased.
+    There is an observed great variablity in win rates.",class="pinfo")
+  
 )
 ), title="Evolution: How has Cricket Changed?", skin="black")

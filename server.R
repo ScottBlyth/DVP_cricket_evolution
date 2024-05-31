@@ -1,33 +1,33 @@
 library(leaflet)
 library(leaflet.extras)
 library(tidyverse)
-library(memoise)
 library(tmaptools)
 library(sf)
 library(maps)
 library(RColorBrewer)
 library(comprehenr)
 library(ggplot2)
-library(gganimate)
+library(ggnewscale)
+#library(gganimate)
 
 
 data <- read.csv("cricsheet_data.csv")
 
 
-data_wins_1 = data %>% group_by(match.id, winner,match_type) %>%
-  reframe(team=team_1,gender=gender,
-          match_type=match_type,year=format(as.Date(start.date, "%Y-%m-%d"), "%Y")) %>%
-  group_by(team, year,match_type,gender) %>% reframe(wins=sum(team==winner),games_played=sum(team==team), match_type=match_type)
+data_wins_1 = data %>% group_by(match.id, team_1, team_2, winner, match_type, gender, start.date) %>% tally() %>%
+  mutate(year=format(as.Date(start.date, "%Y-%m-%d"), "%Y"), team=team_1) %>%
+  group_by(team, year,match_type, gender) %>% summarise(wins=sum(team==winner),games_played=sum(team==team))
 
-data_wins_2 = data %>% group_by(match.id, winner,match_type) %>%
-  reframe(team=team_2,gender=gender,
-          match_type=match_type,year=format(as.Date(start.date, "%Y-%m-%d"), "%Y")) %>%
-  group_by(team, year,match_type, gender) %>% reframe(wins=sum(team==winner),games_played=sum(team==team), match_type=match_type)
-
+data_wins_2 = data %>% group_by(match.id, team_1, team_2, winner, match_type, gender, start.date) %>% tally() %>%
+  mutate(year=format(as.Date(start.date, "%Y-%m-%d"), "%Y"), team=team_2) %>%
+  group_by(team, year,match_type, gender) %>% summarise(wins=sum(team==winner),games_played=sum(team==team))
 
 data_wins = rbind(data_wins_1, data_wins_2) %>% group_by(team, year,match_type, gender) %>%
-  reframe(wins=sum(wins), games_played=sum(games_played), match_type=match_type) %>% 
+  reframe(wins=sum(wins), games_played=sum(games_played)) %>% 
   group_by(team, year,match_type, gender, wins,games_played) %>% tally()
+
+win_rates <- data_wins %>% group_by(team, match_type) %>%
+            summarise(wins=sum(wins), games_played=sum(games_played))
 
 sum_2 <- function(x,y) {
   if(is.na(x) && is.na(y)){
@@ -49,14 +49,12 @@ data_runs <- data %>%
   reframe(gender=gender, batting=team.batting,runs=runs, match_type=match_type,year=format(as.Date(start.date, "%Y-%m-%d"), "%Y")) %>% 
   group_by(gender, batting, year,match_type) %>% summarise(runsAvg=mean(runs))
 
-
-get_location <- memoise(geocode_OSM)
  
 # data_games = data %>% 
 #   reframe(gender=gender, id=match.id, team_1=team_1, team_2=team_2, match_type=match_type,year=format(as.Date(start.date, "%Y-%m-%d"), "%Y")) %>% 
 #     group_by(id, team_1, team_2,match_type, year, gender) %>% tally()
-# 
-#    data_count <- data_games %>% group_by(team_1, year, match_type, gender) %>% tally()
+ 
+# data_count <- data_games %>% group_by(team_1, year, match_type, gender) %>% tally()
 #    data_count2 <- data_games %>% group_by(team_2, year, match_type, gender) %>% tally()
 #   #           reframe(team_1=team_2,gender=gender, year=year,match_type=match_type, n=n)
 #     data_count3 <- full_join(x=data_count,y=data_count2, by=join_by(team_1==team_2, year==year, match_type==match_type, 
@@ -217,7 +215,6 @@ cpal = colorNumeric("Blues",d$n, reverse=TRUE)
 cpal_wins = colorNumeric("RdBu", data_wins$wins/data_wins$games_played, reverse=TRUE)
 
 
-
 shinyServer(function(input, output) {
   
   # FIRST PLOT
@@ -279,6 +276,8 @@ shinyServer(function(input, output) {
    output$runsGraph <- renderPlot(p2())
    p3 <- reactive(create_win_rate_graph(input$countryPerformance)) # change input country 
    output$winrateGraph <- renderPlot(p3())
+
+   
 })
 
 
