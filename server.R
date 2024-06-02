@@ -8,12 +8,13 @@ library(RColorBrewer)
 library(comprehenr)
 library(ggplot2)
 library(ggnewscale)
-#library(gganimate)
+#library(gganimate) # uncomment to be able to make bar chart animation
 
 
 data <- read.csv("cricsheet_data.csv")
+data_counts <- read.csv("games_played.csv")
 
-
+# computng win rates
 data_wins_1 = data %>% group_by(match.id, team_1, team_2, winner, match_type, gender, start.date) %>% tally() %>%
   mutate(year=format(as.Date(start.date, "%Y-%m-%d"), "%Y"), team=team_1) %>%
   group_by(team, year,match_type, gender) %>% summarise(wins=sum(team==winner),games_played=sum(team==team))
@@ -29,43 +30,33 @@ data_wins = rbind(data_wins_1, data_wins_2) %>% group_by(team, year,match_type, 
 win_rates <- data_wins %>% group_by(team, match_type) %>%
             summarise(wins=sum(wins), games_played=sum(games_played))
 
-sum_2 <- function(x,y) {
-  if(is.na(x) && is.na(y)){
-    return(0)
-  }
-  if(is.na(x)){
-    return(y)
-  }
-  if(is.na(y)) {
-    return(x)
-  }
-  return(x+y)
-}
 
-data_counts <- read.csv("games_played.csv")
-#data_counts$n <- to_vec(for(i in 1:nrow(data_counts)) sum_2(data_counts$n.x[i],data_counts$n.y[i]))
-
+# compute data frame for average runs per gender,matchtype,team and year
 data_runs <- data %>% 
   reframe(gender=gender, batting=team.batting,runs=runs, match_type=match_type,year=format(as.Date(start.date, "%Y-%m-%d"), "%Y")) %>% 
   group_by(gender, batting, year,match_type) %>% summarise(runsAvg=mean(runs))
 
  
-# data_games = data %>% 
-#   reframe(gender=gender, id=match.id, team_1=team_1, team_2=team_2, match_type=match_type,year=format(as.Date(start.date, "%Y-%m-%d"), "%Y")) %>% 
-#     group_by(id, team_1, team_2,match_type, year, gender) %>% tally()
- 
-# data_count <- data_games %>% group_by(team_1, year, match_type, gender) %>% tally()
-#    data_count2 <- data_games %>% group_by(team_2, year, match_type, gender) %>% tally()
-#   #           reframe(team_1=team_2,gender=gender, year=year,match_type=match_type, n=n)
-#     data_count3 <- full_join(x=data_count,y=data_count2, by=join_by(team_1==team_2, year==year, match_type==match_type, 
-#                                                                     gender==gender)) %>% 
-#       filter(team_1!="ICC World XI") %>%
-#       mutate(n=n.x+n.y)
-  # 
-  # data_count3$lat = apply(data_count3$team_1, function(x) {return(get_location(x)$coords[[1]][1])})
-  # data_count3$long = apply(data_count3$team_1, function(x) {return(get_location(x)$coords[[2]])})
+
+make_data_counts <- function(){
+  data_games = data %>% 
+     reframe(gender=gender, id=match.id, team_1=team_1, team_2=team_2, match_type=match_type,year=format(as.Date(start.date, "%Y-%m-%d"), "%Y")) %>% 
+       group_by(id, team_1, team_2,match_type, year, gender) %>% tally()
+  
+   data_count <- data_games %>% group_by(team_1, year, match_type, gender) %>% tally()
+      data_count2 <- data_games %>% group_by(team_2, year, match_type, gender) %>% tally()
+                reframe(team_1=team_2,gender=gender, year=year,match_type=match_type, n=n)
+       data_count3 <- full_join(x=data_count,y=data_count2, by=join_by(team_1==team_2, year==year, match_type==match_type, 
+                                                                       gender==gender)) %>% 
+         filter(team_1!="ICC World XI") %>%
+         mutate(n=n.x+n.y)
+      
+   return(data_count3) 
+}
 
 #data_counts <- data_counts %>% group_by(team_1, year.x) %>% reframe(n=sum(n))
+
+# have to rename some teams to fit match with polygons
 func <- function(x) {
   
   if(x == "England") {
@@ -78,11 +69,11 @@ func <- function(x) {
   
 }
 
-data_wins$team = lapply(data_wins$team, func)
-
-
-data_counts$team_1 <- lapply(data_counts$team_1, func)
-data_runs$batting <- lapply(data_runs$batting, func)
+# data_wins$team = lapply(data_wins$team, func)
+# 
+# 
+# data_counts$team_1 <- lapply(data_counts$team_1, func)
+# data_runs$batting <- lapply(data_runs$batting, func)
 
 # create ranked data runs
 # reference
@@ -130,6 +121,7 @@ chart <- ggplot(df_ranked, aes(rank, n))+
           axis.text = element_text(size=10),
           legend.position = "none",
           plot.margin = margin(1,6,1,6), "cm")
+  
   
   
 animation <- chart + 
@@ -241,7 +233,7 @@ shinyServer(function(input, output) {
                           match_type %in% game_forms()) %>% 
                           group_by(team_1) %>% summarise(n=sum(n))) 
 
-  games_played <- reactive(test()$n[match(firstPartNames, test()$team_1)])
+  games_played <- reactive(test()$n[match(firstPartNames, lapply(test()$team_1, func))])
   
   output$gamesMap <- renderLeaflet(leaflet(worldMap) %>% 
                                      setView(lng = 0, lat = 0, zoom = 1.25) %>%
@@ -251,8 +243,8 @@ shinyServer(function(input, output) {
                                        smoothFactor = 0.2, 
                                        fillOpacity = 1,
                                        color = cpal(games_played()),
-                                       popup = paste("Country", test()$team_1[match(firstPartNames, test()$team_1)], 
-                                          "\nn: ", test()$n[match(firstPartNames, test()$team_1)])
+                                       popup = paste("Country", test()$team_1[match(firstPartNames,lapply(test()$team_1, func))], 
+                                          "\nn: ", test()$n[match(firstPartNames, lapply(test()$team_1, func))])
                                      ) %>% addLegend(pal=cpal, values=d$n, title="Matches Played"))
   
    wins <- reactive(filter(data_wins, as.numeric(year)>=as.numeric(format(input$runsYear[1], "%Y")),
@@ -262,7 +254,7 @@ shinyServer(function(input, output) {
    
    # SECOND map/plot
    
-   wins_list <- reactive(wins()$n[match(firstPartNames, wins()$team)])
+   wins_list <- reactive(wins()$n[match(firstPartNames, lapply(wins()$team, func))])
    output$runsMap <- renderLeaflet(leaflet(worldMap) %>% 
                                      addProviderTiles("Esri.WorldGrayCanvas") %>%
                                    addPolygons(
@@ -270,7 +262,7 @@ shinyServer(function(input, output) {
                                      smoothFactor = 0.2, 
                                      fillOpacity = 1,
                                      color = cpal_wins(wins_list()), 
-                                     popup=wins()$team[match(firstPartNames, wins()$team)]
+                                     popup=wins()$team[match(firstPartNames, lapply(wins()$team, func))]
                                    ) %>% addLegend(pal=cpal_wins, values=data_wins$wins/data_wins$games_played, title="Win Rate") )
    p2 <- reactive(create_avg_runs_graph(input$countryPerformance)) 
    output$runsGraph <- renderPlot(p2())
